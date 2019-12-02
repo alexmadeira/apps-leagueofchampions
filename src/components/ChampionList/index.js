@@ -11,6 +11,42 @@ export default function ChampionList() {
           alt=""
         />
       </Champion>
+      <Champion>
+        <img
+          src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Jinx_1.jpg"
+          alt=""
+        />
+      </Champion>{' '}
+      <Champion>
+        <img
+          src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Jinx_2.jpg"
+          alt=""
+        />
+      </Champion>{' '}
+      <Champion>
+        <img
+          src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Jinx_3.jpg"
+          alt=""
+        />
+      </Champion>{' '}
+      <Champion>
+        <img
+          src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Jinx_12.jpg"
+          alt=""
+        />
+      </Champion>{' '}
+      <Champion>
+        <img
+          src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Jinx_13.jpg"
+          alt=""
+        />
+      </Champion>{' '}
+      <Champion>
+        <img
+          src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Jinx_20.jpg"
+          alt=""
+        />
+      </Champion>
     </Container>
   );
 }

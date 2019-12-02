@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { Spaces, Colors } from '~/styles/Metrics';
 
 import logoImage from '~/assets/logo/lol.png';
+import Fonts from '~/styles/Metrics/fonts';
 
 export const Container = styled.nav`
   display: flex;
@@ -42,7 +43,7 @@ export const MenuItem = styled.li`
 
   color: ${Colors.Default};
   text-transform: uppercase;
-  font-size: 25px;
+  font-size: ${Fonts.sizes.Icons};
   cursor: pointer;
   &:hover {
     color: ${Colors.Active};

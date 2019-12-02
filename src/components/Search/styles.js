@@ -1,11 +1,14 @@
 import styled from 'styled-components';
+import { rgba } from 'polished';
+
 import { Fonts, Colors } from '~/styles/Metrics';
+import Spaces from '~/styles/Metrics/spaces';
 
 export const Container = styled.div`
-  background: ${Colors.White};
+  background: ${rgba(Colors.Black, 0.8)};
   position: fixed;
   left: 0;
-  top: 0;
+  top: -100vh;
   width: 100%;
   height: 100%;
   z-index: 10;
@@ -13,8 +16,23 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  transition: top 300ms linear;
+  &.active {
+    top: 0;
+  }
 `;
 
+export const Close = styled.span`
+  color: ${Colors.Default};
+  font-size: ${Fonts.sizes.Icons};
+  right: calc(${Spaces.BaseMargin} * 5);
+  top: calc(${Spaces.BaseMargin} * 2);
+  position: absolute;
+  cursor: pointer;
+  &:hover {
+    color: ${Colors.Active};
+  }
+`;
 export const SearchBox = styled.div`
   flex: 1;
   display: flex;
