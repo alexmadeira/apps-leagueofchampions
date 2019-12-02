@@ -2,8 +2,9 @@ import React from 'react';
 
 import Spells from '~/components/Spells';
 import Role from '~/components/Role';
+import Skins from '~/components/Skins';
 
-import { Container, Name, Title, SkinsLinst, Skin } from './styles';
+import { Container, Name, Title } from './styles';
 
 export default function ChampionInfo() {
   return (
@@ -14,26 +15,7 @@ export default function ChampionInfo() {
         <Role />
       </Title>
       <Spells />
-      <SkinsLinst>
-        <Skin>
-          <img
-            src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Jinx_0.jpg"
-            alt=""
-          />
-        </Skin>
-        <Skin>
-          <img
-            src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Jinx_3.jpg"
-            alt=""
-          />
-        </Skin>
-        <Skin>
-          <img
-            src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Jinx_13.jpg"
-            alt=""
-          />
-        </Skin>
-      </SkinsLinst>
+      <Skins />
     </Container>
   );
 }

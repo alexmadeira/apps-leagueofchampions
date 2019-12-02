@@ -36,30 +36,3 @@ export const Title = styled.p`
   align-items: center;
   color: ${Colors.Default};
 `;
-
-export const SkinsLinst = styled.ul`
-  list-style: none;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-top: ${Spaces.BaseMargin};
-`;
-
-export const Skin = styled.li`
-  margin-right: calc(${Spaces.BaseMargin} * 2);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  height: 140px;
-  overflow: hidden;
-  &:hover {
-    img {
-      opacity: 1;
-    }
-  }
-  img {
-    max-height: 100%;
-    opacity: 0.6;
-  }
-`;
