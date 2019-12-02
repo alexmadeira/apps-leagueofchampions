@@ -4,7 +4,7 @@ import { darken, grayscale } from 'polished';
 import { Spaces, Colors } from '~/styles/Metrics';
 
 export const Container = styled.div`
-  background: url('http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jinx_13.jpg');
+  background: url('http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jinx_20.jpg');
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -36,7 +36,7 @@ export const ChampionInfo = styled.div`
 export const Name = styled.h1`
   font-family: 'Cinzel', serif;
   line-height: 135px;
-  font-size: 140px;
+  font-size: 100px;
   text-transform: uppercase;
   font-weight: bold;
   background: -webkit-linear-gradient(
@@ -50,17 +50,12 @@ export const Name = styled.h1`
 export const Title = styled.p`
   font-family: 'Cinzel', serif;
   font-weight: bold;
-  font-size: 45px;
+  font-size: 30px;
   text-transform: uppercase;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background: -webkit-linear-gradient(
-    ${darken(0.2, Colors.Default)},
-    ${grayscale(Colors.Active)}
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: ${Colors.Default};
 `;
 
 export const Role = styled.ul`
@@ -79,5 +74,6 @@ export const RoleItem = styled.li`
   margin-left: ${Spaces.BaseMargin};
   img {
     max-height: 100%;
+    filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.5));
   }
 `;
