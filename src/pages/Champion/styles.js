@@ -1,7 +1,6 @@
 import styled from 'styled-components';
-import { darken, grayscale } from 'polished';
 
-import { Spaces, Colors } from '~/styles/Metrics';
+import { Spaces } from '~/styles/Metrics';
 
 export const Container = styled.div`
   background: url('http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jinx_20.jpg');
@@ -24,56 +23,21 @@ export const Container = styled.div`
   }
 `;
 
-export const ChampionInfo = styled.div`
-  position: relative;
+export const Page = styled.div`
   display: flex;
-  flex-direction: column;
-  z-index: 2;
+  flex-direction: row;
   flex: 1;
-  padding: calc(${Spaces.BasePadding} * 4);
+  width: 100%;
 `;
 
-export const Name = styled.h1`
-  font-family: 'Cinzel', serif;
-  line-height: 135px;
-  font-size: 100px;
-  text-transform: uppercase;
-  font-weight: bold;
-  background: -webkit-linear-gradient(
-    ${darken(0.2, Colors.Base)},
-    ${grayscale(Colors.Active)}
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-`;
-
-export const Title = styled.p`
-  font-family: 'Cinzel', serif;
-  font-weight: bold;
-  font-size: 30px;
-  text-transform: uppercase;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  color: ${Colors.Default};
-`;
-
-export const Role = styled.ul`
+export const RiotLogo = styled.div`
+  flex: 1;
   display: flex;
   justify-content: center;
-  align-items: center;
-  list-style: none;
-  margin-left: calc(${Spaces.BaseMargin} * 2);
-`;
-
-export const RoleItem = styled.li`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-  margin-left: ${Spaces.BaseMargin};
+  align-items: flex-end;
+  padding: calc(${Spaces.BaseMargin} * 3);
   img {
-    max-height: 100%;
-    filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.5));
+    max-width: 100%;
+    filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.5));
   }
 `;

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { Spaces, Colors, Fonts } from '~/styles/Metrics';
+import { Spaces, Colors } from '~/styles/Metrics';
 
-import logoImage from '~/assets/logo.png';
+import logoImage from '~/assets/logo/lol.png';
 
 export const Container = styled.nav`
   display: flex;
@@ -10,6 +10,8 @@ export const Container = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: ${Spaces.BasePadding} calc(${Spaces.BasePadding} * 4);
+  position: relative;
+  z-index: 1;
 `;
 
 export const Logo = styled.a`
@@ -37,16 +39,16 @@ export const MenuItem = styled.li`
   justify-content: center;
   align-items: center;
   margin: 0 ${Spaces.BaseMargin};
-  a {
-    color: ${Colors.Default};
-    text-transform: uppercase;
-    font-size: ${Fonts.sizes.Middle};
-    &:hover {
-      color: ${Colors.Active};
-      text-decoration: underline;
-    }
-    &.active {
-      color: ${Colors.Active};
-    }
+
+  color: ${Colors.Default};
+  text-transform: uppercase;
+  font-size: 25px;
+  cursor: pointer;
+  &:hover {
+    color: ${Colors.Active};
+    text-decoration: underline;
+  }
+  &.active {
+    color: ${Colors.Active};
   }
 `;

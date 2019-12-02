@@ -9,20 +9,21 @@ export const Container = styled.div`
   align-items: flex-start;
   margin-top: calc(${Spaces.BaseMargin} * 2);
 `;
+
 export const SpellsList = styled.ul`
   list-style: none;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 `;
+
 export const Spell = styled.li`
   display: flex;
   justify-content: center;
   align-items: center;
   width: 64px;
   height: 64px;
-  margin: ${Spaces.BaseMargin} calc(${Spaces.BaseMargin} * 2)
-    ${Spaces.BaseMargin} 0;
+  margin: 0 calc(${Spaces.BaseMargin} * 2) 0 0;
   cursor: pointer;
   overflow: hidden;
   box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.5);

@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaSearch } from 'react-icons/fa';
 
 import { Container, Logo, Menu, MenuItem } from './styles';
 
@@ -8,12 +9,8 @@ export default function Nav() {
       <Logo href="/#">League of Champions</Logo>
       <Menu>
         <MenuItem>
-          <a href="/#" className="active">
-            Champions
-          </a>
+          <FaSearch />
         </MenuItem>
-
-        <MenuItem>busca</MenuItem>
       </Menu>
     </Container>
   );
