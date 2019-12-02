@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { darken, grayscale } from 'polished';
 
-import { Spaces, Colors } from '~/styles/Metrics';
+import { Spaces, Colors, Fonts } from '~/styles/Metrics';
 
 export const Container = styled.div`
   position: relative;
@@ -13,7 +13,7 @@ export const Container = styled.div`
 `;
 
 export const Name = styled.h1`
-  font-family: 'Cinzel', serif;
+  font-family: ${Fonts.family.Cinzel};
   line-height: 135px;
   font-size: 100px;
   text-transform: uppercase;
@@ -27,7 +27,7 @@ export const Name = styled.h1`
 `;
 
 export const Title = styled.p`
-  font-family: 'Cinzel', serif;
+  font-family: ${Fonts.family.Cinzel};
   font-weight: bold;
   font-size: 30px;
   text-transform: uppercase;

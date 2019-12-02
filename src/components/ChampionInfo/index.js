@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Spells from '~/components/Spells';
+import Skills from '~/components/Skills';
 import Role from '~/components/Role';
 import Skins from '~/components/Skins';
 
@@ -14,7 +14,7 @@ export default function ChampionInfo() {
         o Gatilho Desenfreado
         <Role />
       </Title>
-      <Spells />
+      <Skills />
       <Skins />
     </Container>
   );
