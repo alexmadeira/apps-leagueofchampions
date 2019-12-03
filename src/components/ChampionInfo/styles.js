@@ -35,4 +35,5 @@ export const Title = styled.p`
   justify-content: flex-start;
   align-items: center;
   color: ${Colors.Default};
+  text-shadow: 3px 2px 2px ${Colors.Black};
 `;

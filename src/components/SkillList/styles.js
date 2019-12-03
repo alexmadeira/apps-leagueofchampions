@@ -17,7 +17,7 @@ export const Skill = styled.li`
   margin: 0 calc(${Spaces.BaseMargin} * 2) 0 0;
   cursor: pointer;
   overflow: hidden;
-  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 3px 2px 5px ${Colors.Black};
 
   &.active {
     border-radius: 3px;

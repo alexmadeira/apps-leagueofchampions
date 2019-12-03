@@ -22,6 +22,7 @@ export const SkillName = styled.p`
   font-size: calc(${Fonts.sizes.Middle} + 5px);
   font-weight: bold;
   color: ${Colors.Default};
+  text-shadow: 3px 2px 2px ${Colors.Black};
   strong {
     color: ${Colors.Base};
   }
@@ -31,5 +32,5 @@ export const SkillDescription = styled.p`
   max-width: 500px;
   color: ${Colors.Default};
   margin-top: ${Spaces.BaseMargin};
-  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.9);
+  text-shadow: 1px 1px 1px ${Colors.Black};
 `;

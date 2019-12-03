@@ -12,6 +12,7 @@ export const Container = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   position: relative;
+  transition: all 500ms linear;
   &::before {
     content: '';
     left: 0;

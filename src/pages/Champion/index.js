@@ -1,6 +1,6 @@
-import React, { useContext } from 'react';
+import React from 'react';
 
-import ChampionContext from '~/contexts/ChampionContext';
+import { useChampion } from '~/services/hooks/Champion';
 
 import Nav from '~/components/Nav';
 import ChampionInfo from '~/components/ChampionInfo';
@@ -11,15 +11,13 @@ import Logo from '~/assets/logo/riot.png';
 import { Container, Page, RiotLogo } from './styles';
 
 export default function Champion() {
-  const { currentChampion } = useContext(ChampionContext);
-  const { skins, id } = currentChampion;
-  console.tron.log(currentChampion);
-  console.tron.log(skins);
+  const { skins, id, activeSkin } = useChampion();
+
   return (
     <Container
       skin={
         skins &&
-        `http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${id}_${skins[6].num}.jpg`
+        `http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${id}_${activeSkin}.jpg`
       }
     >
       <Search />

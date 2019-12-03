@@ -12,6 +12,7 @@
     "react-icons": "^3.8.0",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
+    "react-scrollbars-custom": "^4.0.21",
     "reactotron-react-js": "^3.3.2",
     "styled-components": "^4.3.2"
   },

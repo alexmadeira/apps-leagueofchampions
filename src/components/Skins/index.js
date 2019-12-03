@@ -1,34 +1,31 @@
 import React from 'react';
 
-import { Container, Skin } from './styles';
+import { useChampion, useSkin } from '~/services/hooks/Champion';
+
+import { Container, SkinList, Skin } from './styles';
 
 export default function Skins() {
+  const { skins, id, activeSkin } = useChampion();
+  const setSkin = useSkin();
+
   return (
     <Container>
-      <Skin>
-        <img
-          src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Jinx_0.jpg"
-          alt=""
-        />
-      </Skin>
-      <Skin>
-        <img
-          src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Jinx_3.jpg"
-          alt=""
-        />
-      </Skin>
-      <Skin>
-        <img
-          src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Jinx_13.jpg"
-          alt=""
-        />
-      </Skin>
-      <Skin className="active">
-        <img
-          src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Jinx_20.jpg"
-          alt=""
-        />
-      </Skin>
+      <SkinList>
+        {skins.map(({ num }) => (
+          <Skin
+            key={num}
+            onClick={() => {
+              setSkin(num);
+            }}
+            className={activeSkin === num && 'active'}
+          >
+            <img
+              src={`http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${id}_${num}.jpg`}
+              alt=""
+            />
+          </Skin>
+        ))}
+      </SkinList>
     </Container>
   );
 }
