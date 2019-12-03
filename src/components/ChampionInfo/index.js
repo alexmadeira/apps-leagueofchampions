@@ -1,5 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
+
 import Api from '~/services/Api';
+
+import ChampionContext from '~/contexts/ChampionContext';
 
 import Skills from '~/components/Skills';
 import Role from '~/components/Role';
@@ -9,17 +12,20 @@ import { Container, Name, Title } from './styles';
 
 export default function ChampionInfo() {
   const [champion, setChampion] = useState({});
+  const {
+    currentChampion: { find },
+    setCurrentChampion,
+  } = useContext(ChampionContext);
 
   useEffect(() => {
-    if (!champion.name) {
+    if (find) {
       const getChampion = async () => {
-        const Champ = 'Jinx';
         const {
           data: { data },
-        } = await Api.get(`champion/${Champ}.json`);
-        console.tron.log(data[Champ]);
-        setChampion(data[Champ]);
-        return data;
+        } = await Api.get(`champion/${find}.json`);
+
+        setChampion(data[find]);
+        setCurrentChampion(data[find]);
       };
       getChampion();
     }

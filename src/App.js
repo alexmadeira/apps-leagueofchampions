@@ -1,18 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
+import { ChampionsProvider } from '~/contexts/ChampionContext';
 import '~/config/ReactotronConfig';
 
 import GlobalStyle from '~/styles/global';
 
 import Routes from '~/routes';
 
-// https://developer.riotgames.com/docs/lol#data-dragon_other
 function App() {
+  const [currentChampion, setCurrentChampion] = useState({
+    find: 'Vi',
+    loading: true,
+  });
+
   return (
     <BrowserRouter>
       <GlobalStyle />
-      <Routes />
+      <ChampionsProvider value={{ currentChampion, setCurrentChampion }}>
+        <Routes />
+      </ChampionsProvider>
     </BrowserRouter>
   );
 }

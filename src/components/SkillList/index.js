@@ -1,40 +1,32 @@
-import React from 'react';
+import React, { useContext } from 'react';
+
+import ChampionContext from '~/contexts/ChampionContext';
 
 import { Container, Skill } from './styles';
 
 export default function SpellList() {
+  const { currentChampion } = useContext(ChampionContext);
+  const { passive, spells } = currentChampion;
+
   return (
     <Container>
-      <Skill>
-        <img
-          src="http://ddragon.leagueoflegends.com/cdn/9.23.1/img/passive/Jinx_Passive.png"
-          alt=""
-        />
-      </Skill>
-      <Skill>
-        <img
-          src="http://ddragon.leagueoflegends.com/cdn/9.23.1/img/spell/JinxQ.png"
-          alt=""
-        />
-      </Skill>
-      <Skill className="active">
-        <img
-          src="http://ddragon.leagueoflegends.com/cdn/9.23.1/img/spell/JinxW.png"
-          alt=""
-        />
-      </Skill>
-      <Skill>
-        <img
-          src="http://ddragon.leagueoflegends.com/cdn/9.23.1/img/spell/JinxE.png"
-          alt=""
-        />
-      </Skill>
-      <Skill>
-        <img
-          src="http://ddragon.leagueoflegends.com/cdn/9.23.1/img/spell/JinxR.png"
-          alt=""
-        />
-      </Skill>
+      {passive && (
+        <Skill>
+          <img
+            src={`http://ddragon.leagueoflegends.com/cdn/9.23.1/img/passive/${passive.image.full}`}
+            alt=""
+          />
+        </Skill>
+      )}
+      {spells &&
+        spells.map(spell => (
+          <Skill key={spell.id}>
+            <img
+              src={`http://ddragon.leagueoflegends.com/cdn/9.23.1/img/spell/${spell.image.full}`}
+              alt=""
+            />
+          </Skill>
+        ))}
     </Container>
   );
 }

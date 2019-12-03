@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Spaces } from '~/styles/Metrics';
 
 export const Container = styled.div`
-  background: url('http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jinx_20.jpg');
+  background: url(${props => (props.skin ? props.skin : '')});
   display: flex;
   flex-direction: column;
   flex: 1;
