@@ -6,10 +6,10 @@ import { Spaces, Colors } from '~/styles/Metrics';
 export const Container = styled(Scrollbar)`
   width: 60vw !important;
   height: 185px !important;
-  min-width: 320px;
 `;
 
 export const SkinList = styled.ul`
+  width: ${props => (props.width ? props.width : '')}px;
   list-style: none;
   display: flex;
   justify-content: flex-start;
@@ -18,7 +18,7 @@ export const SkinList = styled.ul`
 `;
 
 export const Skin = styled.li`
-  margin-right: ${Spaces.BaseMargin};
+  margin: 0 ${Spaces.BaseMargin};
   display: flex;
   justify-content: center;
   align-items: center;

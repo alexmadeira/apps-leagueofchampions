@@ -10,21 +10,22 @@ export default function Skins() {
 
   return (
     <Container>
-      <SkinList>
-        {skins.map(({ num }) => (
-          <Skin
-            key={num}
-            onClick={() => {
-              setSkin(num);
-            }}
-            className={activeSkin === num && 'active'}
-          >
-            <img
-              src={`http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${id}_${num}.jpg`}
-              alt=""
-            />
-          </Skin>
-        ))}
+      <SkinList width={skins && skins.length * (75 + 30)}>
+        {skins &&
+          skins.map(({ num }) => (
+            <Skin
+              key={num}
+              onClick={() => {
+                setSkin(num);
+              }}
+              className={activeSkin === num && 'active'}
+            >
+              <img
+                src={`http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${id}_${num}.jpg`}
+                alt=""
+              />
+            </Skin>
+          ))}
       </SkinList>
     </Container>
   );
