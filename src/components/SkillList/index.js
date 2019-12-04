@@ -8,9 +8,6 @@ export default function SpellList() {
   const { passive, spells, activeSkill } = useChampion();
   const setSkill = useSkill();
 
-  const sd = useChampion();
-  console.tron.log(sd);
-
   return (
     <Container>
       {passive && (
