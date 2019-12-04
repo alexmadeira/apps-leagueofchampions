@@ -25,6 +25,7 @@ export const SkillName = styled.p`
   text-shadow: 3px 2px 2px ${Colors.Black};
   strong {
     color: ${Colors.Base};
+    text-transform: uppercase;
   }
 `;
 

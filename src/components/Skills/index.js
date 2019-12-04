@@ -9,20 +9,33 @@ import {
   SkillDescription,
 } from './styles';
 
+import { useChampion } from '~/services/hooks/Champion';
+
+const getSkill = champion => {
+  const { activeSkill, passive, spells } = champion;
+  const buttons = ['q', 'w', 'e', 'r'];
+
+  if (activeSkill >= 0) {
+    return { button: buttons[activeSkill], skill: spells[activeSkill] };
+  }
+  return { button: 'Passiva', skill: passive || { name: '', description: '' } };
+};
+
 export default function Skills() {
+  const champion = useChampion();
+  const {
+    button,
+    skill: { name, description },
+  } = getSkill(champion);
+
   return (
     <Container>
       <SkillList />
       <SkillDescriptionBox>
         <SkillName>
-          <strong>R</strong> - Super Mega Míssil da Morte!
+          <strong>{button}</strong> - {name}
         </SkillName>
-        <SkillDescription>
-          Jinx dispara um super-míssil no mapa, que acumula dano ao longo de seu
-          trajeto. O míssil explodirá ao colidir com um campeão inimigo,
-          causando dano a ele e a inimigos ao seu redor, com base em sua Vida
-          removida.
-        </SkillDescription>
+        <SkillDescription>{description}</SkillDescription>
       </SkillDescriptionBox>
     </Container>
   );
