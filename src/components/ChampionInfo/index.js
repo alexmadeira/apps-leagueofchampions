@@ -4,7 +4,7 @@ import Skills from '~/components/Skills';
 import Role from '~/components/Role';
 import Skins from '~/components/Skins';
 
-import { Container, Name, Title } from './styles';
+import { Container, Name, TitleBox, Title } from './styles';
 
 import { useChampion } from '~/services/hooks/Champion';
 
@@ -13,10 +13,10 @@ export default function ChampionInfo() {
   return (
     <Container>
       <Name>{name}</Name>
-      <Title>
-        {title}
+      <TitleBox>
+        <Title>{title}</Title>
         <Role />
-      </Title>
+      </TitleBox>
       <Skills />
       <Skins />
     </Container>

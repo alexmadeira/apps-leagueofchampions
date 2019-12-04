@@ -25,7 +25,11 @@ export const Name = styled.h1`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 `;
-
+export const TitleBox = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+`;
 export const Title = styled.p`
   font-family: ${Fonts.family.Cinzel};
   font-weight: bold;
