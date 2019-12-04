@@ -4,7 +4,7 @@ import { findChampion } from '~/services/Champions';
 import ChampionContext from '~/contexts/ChampionContext';
 
 export const useChampion = () => {
-  const [champion, setChampion] = useState({ skins: [] });
+  const [champion, setChampion] = useState({});
   const {
     currentChampion: { find, loading, activeSkin, activeSkill },
     currentChampion,
