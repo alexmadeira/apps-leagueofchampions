@@ -8,11 +8,11 @@ import Search from '~/components/Search';
 
 import Logo from '~/assets/logo/riot.png';
 
-import { Container, Page, RiotLogo } from './styles';
+import { Container, PreLoad, Page, RiotLogo } from './styles';
 
 export default function Champion() {
   const { skins, id, activeSkin } = useChampion();
-
+  console.tron.log(skins);
   return (
     <Container
       skin={
@@ -20,6 +20,16 @@ export default function Champion() {
         `http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${id}_${activeSkin}.jpg`
       }
     >
+      <PreLoad>
+        {skins &&
+          skins.map(({ num, name }) => (
+            <img
+              src={`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${id}_${num}.jpg`}
+              key={num}
+              alt={name}
+            />
+          ))}
+      </PreLoad>
       <Search />
       <Nav />
       <Page>

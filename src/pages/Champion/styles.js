@@ -24,6 +24,10 @@ export const Container = styled.div`
   }
 `;
 
+export const PreLoad = styled.div`
+  display: none;
+`;
+
 export const Page = styled.div`
   display: flex;
   flex-direction: row;
