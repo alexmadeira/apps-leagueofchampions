@@ -1,19 +1,22 @@
 import React from 'react';
 
-import fighter from '~/assets/role/fighter.png';
-import marksman from '~/assets/role/marksman.png';
+import RoleImage from '~/assets/role';
 
 import { Container, RoleItem } from './styles';
 
+import { useChampion } from '~/services/hooks/Champion';
+
 export default function Role() {
+  const { tags } = useChampion();
+
   return (
     <Container>
-      <RoleItem>
-        <img src={fighter} alt="as" />
-      </RoleItem>
-      <RoleItem>
-        <img src={marksman} alt="as" />
-      </RoleItem>
+      {tags &&
+        tags.map(role => (
+          <RoleItem key={role}>
+            <img src={RoleImage[role.toLowerCase()]} alt={role} />
+          </RoleItem>
+        ))}
     </Container>
   );
 }
