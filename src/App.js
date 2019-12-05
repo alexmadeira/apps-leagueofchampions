@@ -10,12 +10,12 @@ import Routes from '~/routes';
 
 function App() {
   const [currentChampion, setCurrentChampion] = useState({
-    find: 'Alistar',
+    find: 'Jinx',
+    search: false,
     loading: true,
     activeSkill: -1,
   });
 
-  console.tron.log('currentChampion', currentChampion);
   return (
     <BrowserRouter>
       <GlobalStyle />

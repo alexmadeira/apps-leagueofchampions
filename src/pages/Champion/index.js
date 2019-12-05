@@ -12,7 +12,7 @@ import { Container, PreLoad, Page, RiotLogo } from './styles';
 
 export default function Champion() {
   const { skins, id, activeSkin } = useChampion();
-  console.tron.log(skins);
+
   return (
     <Container
       skin={

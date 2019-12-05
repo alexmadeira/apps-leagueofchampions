@@ -6,6 +6,9 @@ import { Spaces, Colors } from '~/styles/Metrics';
 export const Container = styled(Scrollbar)`
   width: 60vw !important;
   height: 185px !important;
+  justify-self: flex-end;
+  margin-top: auto;
+  margin-bottom: calc(${Spaces.BaseMargin} * 2);
 `;
 
 export const SkinList = styled.ul`

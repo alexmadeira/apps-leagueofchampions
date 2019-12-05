@@ -6,7 +6,7 @@ import ChampionContext from '~/contexts/ChampionContext';
 export const useChampion = () => {
   const [champion, setChampion] = useState({});
   const {
-    currentChampion: { find, loading, activeSkin, activeSkill },
+    currentChampion: { find, loading, search, activeSkin, activeSkill },
     currentChampion,
     setCurrentChampion,
   } = useContext(ChampionContext);
@@ -20,6 +20,7 @@ export const useChampion = () => {
           ...data,
           activeSkin: activeSkin || 0,
           activeSkill,
+          search,
         });
         setCurrentChampion({ ...currentChampion, loading: false });
       };
@@ -33,6 +34,7 @@ export const useChampion = () => {
     currentChampion,
     find,
     loading,
+    search,
     setCurrentChampion,
   ]);
 
@@ -56,6 +58,17 @@ export const useSkill = () => {
     setCurrentChampion({
       ...currentChampion,
       activeSkill: skill,
+      loading: true,
+    });
+  };
+};
+
+export const useSearch = () => {
+  const { currentChampion, setCurrentChampion } = useContext(ChampionContext);
+  return () => {
+    setCurrentChampion({
+      ...currentChampion,
+      search: !currentChampion.search,
       loading: true,
     });
   };
