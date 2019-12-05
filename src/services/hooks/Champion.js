@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from 'react';
-import { findChampion } from '~/services/Champions';
+import { findChampion, getChampionAll } from '~/services/Champions';
 
 import ChampionContext from '~/contexts/ChampionContext';
 
@@ -41,6 +41,32 @@ export const useChampion = () => {
   return champion;
 };
 
+export const useAllChampion = () => {
+  const [champions, setChampions] = useState({});
+  const {
+    currentChampion: { allChampions },
+    currentChampion,
+    setCurrentChampion,
+  } = useContext(ChampionContext);
+
+  useEffect(() => {
+    if (!allChampions) {
+      const loadingAllChampions = async () => {
+        const data = await getChampionAll();
+
+        setChampions(data);
+        setCurrentChampion({ ...currentChampion, allChampions: data });
+      };
+
+      loadingAllChampions();
+    } else {
+      setChampions(allChampions);
+    }
+  }, [allChampions, currentChampion, setCurrentChampion]);
+
+  return champions;
+};
+
 export const useSkin = () => {
   const { currentChampion, setCurrentChampion } = useContext(ChampionContext);
   return skin => {
@@ -58,17 +84,6 @@ export const useSkill = () => {
     setCurrentChampion({
       ...currentChampion,
       activeSkill: skill,
-      loading: true,
-    });
-  };
-};
-
-export const useSearch = () => {
-  const { currentChampion, setCurrentChampion } = useContext(ChampionContext);
-  return () => {
-    setCurrentChampion({
-      ...currentChampion,
-      search: !currentChampion.search,
       loading: true,
     });
   };

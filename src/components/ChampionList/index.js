@@ -1,51 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import { Container, Champion } from './styles';
 
+import ChampionContext from '~/contexts/ChampionContext';
+
 export default function ChampionList() {
+  const {
+    currentChampion: { searchList },
+  } = useContext(ChampionContext);
+  console.tron.log(searchList);
   return (
     <Container>
       <Champion>
-        <img
-          src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Jinx_0.jpg"
-          alt=""
-        />
-      </Champion>
-      <Champion>
-        <img
-          src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Jinx_1.jpg"
-          alt=""
-        />
-      </Champion>{' '}
-      <Champion>
-        <img
-          src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Jinx_2.jpg"
-          alt=""
-        />
-      </Champion>{' '}
-      <Champion>
-        <img
-          src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Jinx_3.jpg"
-          alt=""
-        />
-      </Champion>{' '}
-      <Champion>
-        <img
-          src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Jinx_12.jpg"
-          alt=""
-        />
-      </Champion>{' '}
-      <Champion>
-        <img
-          src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Jinx_13.jpg"
-          alt=""
-        />
-      </Champion>{' '}
-      <Champion>
-        <img
-          src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Jinx_20.jpg"
-          alt=""
-        />
+        <img src="#" alt="" />
       </Champion>
     </Container>
   );

@@ -13,6 +13,7 @@ function App() {
     find: 'Jinx',
     search: false,
     loading: true,
+    searchList: {},
     activeSkill: -1,
   });
 

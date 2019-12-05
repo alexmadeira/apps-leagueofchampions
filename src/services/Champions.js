@@ -8,3 +8,11 @@ export const findChampion = async champion => {
 
   return data[champion];
 };
+
+export const getChampionAll = async () => {
+  const {
+    data: { data },
+  } = await Api.get(`champion.json`);
+
+  return data;
+};

@@ -5,16 +5,20 @@ import ChampionList from '~/components/ChampionList';
 
 import { Container, Close, SearchBox, SearchForm, ResultBox } from './styles';
 
-import { useChampion, useSearch } from '~/services/hooks/Champion';
+import { useSearch } from '~/services/hooks/Search';
+import { useAllChampion } from '~/services/hooks/Champion';
 
 export default function Search() {
-  const { search } = useChampion();
-  const toogleSeach = useSearch();
+  const [searchChampion, setSearchChampion] = useState('');
 
-  const [searchChampion, setSearchChampion] = useState(false);
+  const { toogleSearch, isSearch, filterSerach } = useSearch();
+  const allChampion = useAllChampion() || {};
+
+  filterSerach({ allChampion, searchChampion });
+
   return (
-    <Container className={search && `active`}>
-      <Close onClick={() => toogleSeach()}>
+    <Container className={isSearch() && `active`}>
+      <Close onClick={() => toogleSearch()}>
         <FaTimes />
       </Close>
       <SearchBox>
