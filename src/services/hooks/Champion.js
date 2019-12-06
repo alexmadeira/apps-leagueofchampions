@@ -88,3 +88,14 @@ export const useSkill = () => {
     });
   };
 };
+
+export const useActualChampion = () => {
+  const { currentChampion, setCurrentChampion } = useContext(ChampionContext);
+  return find => {
+    setCurrentChampion({
+      ...currentChampion,
+      find,
+      loading: true,
+    });
+  };
+};

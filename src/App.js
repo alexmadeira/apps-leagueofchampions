@@ -10,13 +10,12 @@ import Routes from '~/routes';
 
 function App() {
   const [currentChampion, setCurrentChampion] = useState({
-    find: 'Jinx',
+    find: 'Udyr',
     search: false,
     loading: true,
     searchList: {},
     activeSkill: -1,
   });
-
   return (
     <BrowserRouter>
       <GlobalStyle />

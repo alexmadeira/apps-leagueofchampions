@@ -11,10 +11,9 @@ import { useAllChampion } from '~/services/hooks/Champion';
 export default function Search() {
   const [searchChampion, setSearchChampion] = useState('');
 
-  const { toogleSearch, isSearch, filterSerach } = useSearch();
-  const allChampion = useAllChampion() || {};
-
-  filterSerach({ allChampion, searchChampion });
+  const { toogleSearch, isSearch, filterSearch, searchList } = useSearch();
+  const allChampion = useAllChampion();
+  const championList = searchList();
 
   return (
     <Container className={isSearch() && `active`}>
@@ -25,13 +24,14 @@ export default function Search() {
         <SearchForm>
           <input
             onChange={e => {
+              filterSearch(e.target.value, allChampion);
               setSearchChampion(e.target.value);
             }}
           />
         </SearchForm>
       </SearchBox>
       <ResultBox className={searchChampion && 'active'}>
-        <ChampionList />
+        <ChampionList list={championList || {}} />
       </ResultBox>
     </Container>
   );

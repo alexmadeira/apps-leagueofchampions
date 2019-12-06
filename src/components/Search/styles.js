@@ -8,7 +8,7 @@ export const Container = styled.div`
   background: ${rgba(Colors.Black, 0.8)};
   position: fixed;
   left: 0;
-  top: -100vh;
+  top: -101vh;
   width: 100%;
   height: 100%;
   z-index: 10;

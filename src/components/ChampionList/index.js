@@ -1,19 +1,37 @@
-import React, { useContext } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 import { Container, Champion } from './styles';
+import { useActualChampion } from '~/services/hooks/Champion';
 
-import ChampionContext from '~/contexts/ChampionContext';
-
-export default function ChampionList() {
-  const {
-    currentChampion: { searchList },
-  } = useContext(ChampionContext);
-  console.tron.log(searchList);
+function ChampionList({ list }) {
+  const setFind = useActualChampion();
+  const listArray = Object.entries(list);
   return (
     <Container>
-      <Champion>
-        <img src="#" alt="" />
-      </Champion>
+      {listArray &&
+        listArray.map(item => {
+          const { id, name } = item[1];
+          return (
+            <Champion
+              key={name}
+              onClick={() => {
+                setFind(id);
+              }}
+            >
+              <img
+                src={`http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${id}_0.jpg`}
+                alt={name}
+              />
+            </Champion>
+          );
+        })}
     </Container>
   );
 }
+
+ChampionList.propTypes = {
+  list: PropTypes.shape().isRequired,
+};
+
+export default ChampionList;

@@ -1,9 +1,14 @@
-import { useState, useEffect, useContext } from 'react';
+import { useContext } from 'react';
 import filterObject from 'filter-obj';
 import ChampionContext from '~/contexts/ChampionContext';
 
 export const useSearch = () => {
   const { currentChampion, setCurrentChampion } = useContext(ChampionContext);
+
+  const isSearch = () => currentChampion.search;
+
+  const searchList = () => currentChampion.searchList;
+
   const toogleSearch = () => {
     setCurrentChampion({
       ...currentChampion,
@@ -11,21 +16,17 @@ export const useSearch = () => {
       loading: true,
     });
   };
-  const isSearch = () => currentChampion.search;
 
-  const filterSerach = ({ allChampion, searchChampion }) => {
-    const championList = filterObject(allChampion, (key, value) =>
-      value.id.toLowerCase().includes(searchChampion.toLowerCase())
+  const filterSearch = (find, list) => {
+    const championList = filterObject(list, (key, value) =>
+      value.id.toLowerCase().includes(find.toLowerCase())
     );
-    if (!currentChampion.searchList) {
-      setCurrentChampion({
-        ...currentChampion,
-        searchList: championList,
-        loading: true,
-      });
-    }
-    return championList || {};
+    setCurrentChampion({
+      ...currentChampion,
+      searchList: championList,
+      loading: true,
+    });
   };
 
-  return { toogleSearch, isSearch, filterSerach };
+  return { toogleSearch, isSearch, filterSearch, searchList };
 };
