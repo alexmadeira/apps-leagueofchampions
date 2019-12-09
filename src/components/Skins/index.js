@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { useChampion, useSkin } from '~/services/hooks/Champion';
+import { useChampion, useChampionInformation } from '~/services/hooks/Champion';
 
 import { Container, SkinList, Skin } from './styles';
 
 export default function Skins() {
   const { skins, id, activeSkin } = useChampion();
-  const setSkin = useSkin();
+  const { setSkin } = useChampionInformation();
 
   return (
     <Container>

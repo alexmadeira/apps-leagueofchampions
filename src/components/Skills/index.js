@@ -1,4 +1,5 @@
 import React from 'react';
+import stripHtml from 'string-strip-html';
 
 import SkillList from '~/components/SkillList';
 
@@ -35,7 +36,7 @@ export default function Skills() {
         <SkillName>
           <strong>{button}</strong> - {name}
         </SkillName>
-        <SkillDescription>{description}</SkillDescription>
+        <SkillDescription>{stripHtml(description)}</SkillDescription>
       </SkillDescriptionBox>
     </Container>
   );

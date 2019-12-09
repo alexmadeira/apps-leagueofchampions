@@ -10,7 +10,7 @@ import Routes from '~/routes';
 
 function App() {
   const [currentChampion, setCurrentChampion] = useState({
-    find: 'Udyr',
+    find: 'Nidalee',
     search: false,
     loading: true,
     searchList: {},

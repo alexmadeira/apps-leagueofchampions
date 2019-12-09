@@ -12,8 +12,7 @@ export const Skill = styled.li`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 64px;
-  height: 64px;
+  width: 50px;
   margin: 0 calc(${Spaces.BaseMargin} * 2) 0 0;
   cursor: pointer;
   overflow: hidden;

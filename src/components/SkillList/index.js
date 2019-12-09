@@ -2,11 +2,11 @@ import React from 'react';
 
 import { Container, Skill } from './styles';
 
-import { useChampion, useSkill } from '~/services/hooks/Champion';
+import { useChampion, useChampionInformation } from '~/services/hooks/Champion';
 
 export default function SpellList() {
   const { passive, spells, activeSkill } = useChampion();
-  const setSkill = useSkill();
+  const { setSkill } = useChampionInformation();
 
   return (
     <Container>

@@ -15,6 +15,7 @@
     "react-scripts": "3.0.1",
     "react-scrollbars-custom": "^4.0.21",
     "reactotron-react-js": "^3.3.2",
+    "string-strip-html": "^4.3.10",
     "styled-components": "^4.3.2"
   },
   "scripts": {

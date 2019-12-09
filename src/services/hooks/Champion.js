@@ -67,35 +67,31 @@ export const useAllChampion = () => {
   return champions;
 };
 
-export const useSkin = () => {
+export const useChampionInformation = () => {
   const { currentChampion, setCurrentChampion } = useContext(ChampionContext);
-  return skin => {
+  const setSkin = skin => {
     setCurrentChampion({
       ...currentChampion,
       activeSkin: skin,
       loading: true,
     });
   };
-};
 
-export const useSkill = () => {
-  const { currentChampion, setCurrentChampion } = useContext(ChampionContext);
-  return skill => {
+  const setSkill = skill => {
     setCurrentChampion({
       ...currentChampion,
       activeSkill: skill,
       loading: true,
     });
   };
-};
 
-export const useActualChampion = () => {
-  const { currentChampion, setCurrentChampion } = useContext(ChampionContext);
-  return find => {
+  const setFind = find => {
     setCurrentChampion({
       ...currentChampion,
       find,
       loading: true,
     });
   };
+
+  return { setSkin, setSkill, setFind };
 };

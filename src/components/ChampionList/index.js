@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { Container, Champion } from './styles';
-import { useActualChampion } from '~/services/hooks/Champion';
+import { useChampionInformation } from '~/services/hooks/Champion';
 
 function ChampionList({ list }) {
-  const setFind = useActualChampion();
+  const { setFind } = useChampionInformation();
   const listArray = Object.entries(list);
   return (
     <Container>

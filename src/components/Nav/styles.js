@@ -13,6 +13,7 @@ export const Container = styled.nav`
   padding: ${Spaces.BasePadding} calc(${Spaces.BasePadding} * 4);
   position: relative;
   z-index: 1;
+  margin-bottom: 15px;
 `;
 
 export const Logo = styled.a`

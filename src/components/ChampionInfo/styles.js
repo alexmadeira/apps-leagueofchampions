@@ -14,8 +14,8 @@ export const Container = styled.div`
 
 export const Name = styled.h1`
   font-family: ${Fonts.family.Cinzel};
-  line-height: 135px;
-  font-size: 100px;
+  line-height: 80px;
+  font-size: 80px;
   text-transform: uppercase;
   font-weight: bold;
   background: -webkit-linear-gradient(

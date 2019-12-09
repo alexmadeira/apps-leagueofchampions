@@ -30,7 +30,7 @@ export const SkillName = styled.p`
 `;
 
 export const SkillDescription = styled.p`
-  max-width: 500px;
+  max-width: 60vw;
   color: ${Colors.Default};
   margin-top: ${Spaces.BaseMargin};
   text-shadow: 1px 1px 1px ${Colors.Black};
