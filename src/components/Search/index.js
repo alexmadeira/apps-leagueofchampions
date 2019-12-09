@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaTimes } from 'react-icons/fa';
 
 import ChampionList from '~/components/ChampionList';
@@ -15,6 +15,12 @@ export default function Search() {
   const allChampion = useAllChampion();
   const championList = searchList();
 
+  useEffect(() => {
+    if (!isSearch()) {
+      setSearchChampion('');
+    }
+  }, [isSearch]);
+
   return (
     <Container className={isSearch() && `active`}>
       <Close onClick={() => toogleSearch()}>
@@ -23,6 +29,7 @@ export default function Search() {
       <SearchBox>
         <SearchForm>
           <input
+            value={searchChampion}
             onChange={e => {
               filterSearch(e.target.value, allChampion);
               setSearchChampion(e.target.value);

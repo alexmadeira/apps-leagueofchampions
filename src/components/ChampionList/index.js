@@ -6,7 +6,9 @@ import { useChampionInformation } from '~/services/hooks/Champion';
 
 function ChampionList({ list }) {
   const { setFind } = useChampionInformation();
+
   const listArray = Object.entries(list);
+
   return (
     <Container>
       {listArray &&

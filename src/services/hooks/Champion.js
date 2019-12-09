@@ -89,6 +89,7 @@ export const useChampionInformation = () => {
     setCurrentChampion({
       ...currentChampion,
       find,
+      search: false,
       loading: true,
     });
   };
