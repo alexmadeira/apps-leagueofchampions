@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { darken, grayscale } from 'polished';
 
 import { Spaces, Colors, Fonts } from '~/styles/Metrics';
 
@@ -18,10 +17,7 @@ export const Name = styled.h1`
   font-size: 80px;
   text-transform: uppercase;
   font-weight: bold;
-  background: -webkit-linear-gradient(
-    ${darken(0.2, Colors.Base)},
-    ${grayscale(Colors.Active)}
-  );
+  background: -webkit-linear-gradient(${Colors.Base}, ${Colors.Active});
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 `;
