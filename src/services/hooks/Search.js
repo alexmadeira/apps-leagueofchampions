@@ -13,18 +13,19 @@ export const useSearch = () => {
     setCurrentChampion({
       ...currentChampion,
       search: !currentChampion.search,
-      loading: true,
     });
   };
 
   const filterSearch = (find, list) => {
-    const championList = filterObject(list, (key, value) =>
-      value.id.toLowerCase().includes(find.toLowerCase())
-    );
+    const championList = filterObject(list, (key, value) => {
+      if (!find) {
+        return true;
+      }
+      return value.id.toLowerCase().includes(find.toLowerCase());
+    });
     setCurrentChampion({
       ...currentChampion,
       searchList: championList,
-      loading: true,
     });
   };
 

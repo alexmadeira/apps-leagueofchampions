@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { FaTimes } from 'react-icons/fa';
 
 import ChampionList from '~/components/ChampionList';
@@ -9,17 +9,11 @@ import { useSearch } from '~/services/hooks/Search';
 import { useAllChampion } from '~/services/hooks/Champion';
 
 export default function Search() {
-  const [searchChampion, setSearchChampion] = useState('');
+  const [searchChampion, setSearchChampion] = useState(false);
 
   const { toogleSearch, isSearch, filterSearch, searchList } = useSearch();
   const allChampion = useAllChampion();
   const championList = searchList();
-
-  useEffect(() => {
-    if (!isSearch()) {
-      setSearchChampion('');
-    }
-  }, [isSearch]);
 
   return (
     <Container className={isSearch() && `active`}>
@@ -29,10 +23,14 @@ export default function Search() {
       <SearchBox>
         <SearchForm>
           <input
-            value={searchChampion}
+            onFocus={() => {
+              setSearchChampion(true);
+            }}
+            onBlur={() => {
+              setSearchChampion(false);
+            }}
             onChange={e => {
               filterSearch(e.target.value, allChampion);
-              setSearchChampion(e.target.value);
             }}
           />
         </SearchForm>

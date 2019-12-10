@@ -15,6 +15,7 @@ export const useChampion = () => {
 
   useEffect(() => {
     if (loading) {
+      console.tron.log(loading);
       const loadingChampion = async () => {
         const data = await findChampion(find);
 
@@ -57,7 +58,11 @@ export const useAllChampion = () => {
         const data = await getChampionAll();
 
         setChampions(data);
-        setCurrentChampion({ ...currentChampion, allChampions: data });
+        setCurrentChampion({
+          ...currentChampion,
+          allChampions: data,
+          searchList: data,
+        });
       };
 
       loadingAllChampions();

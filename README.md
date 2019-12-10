@@ -1,4 +1,4 @@
-# Leagueofchampions
+# Leagueofchampions [![Netlify Status](https://api.netlify.com/api/v1/badges/5872c43b-0aef-4e03-8131-679b9c89aaa9/deploy-status)](https://app.netlify.com/sites/mystifying-easley-76eb63/deploys)
 
 Um projeto que desenvolvi para passar o tempo e me divertir
 
