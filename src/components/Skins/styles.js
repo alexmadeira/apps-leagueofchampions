@@ -28,7 +28,6 @@ export const Skin = styled.li`
   cursor: pointer;
   height: 140px;
   min-width: 75px;
-  overflow: hidden;
   &:hover {
     box-shadow: 0px 0px 10px 5px ${Colors.DarkShadow};
     img {
@@ -42,9 +41,5 @@ export const Skin = styled.li`
     img {
       opacity: 1;
     }
-  }
-  img {
-    max-height: 100%;
-    opacity: 0.6;
   }
 `;

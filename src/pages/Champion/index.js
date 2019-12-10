@@ -13,7 +13,7 @@ import { Container, Page, RiotLogo } from './styles';
 
 export default function Champion() {
   const [currentChampion, setCurrentChampion] = useState({
-    find: 'Udyr',
+    find: 'Jinx',
     search: false,
     loading: true,
     searchList: {},

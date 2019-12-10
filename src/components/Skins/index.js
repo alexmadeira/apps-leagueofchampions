@@ -1,5 +1,7 @@
 import React from 'react';
 
+import LoadingSplash from '~/components/LoadingSplash';
+
 import { useChampion, useChampionInformation } from '~/services/hooks/Champion';
 
 import { Container, SkinList, Skin } from './styles';
@@ -20,10 +22,7 @@ export default function Skins() {
               }}
               className={activeSkin === num && 'active'}
             >
-              <img
-                src={`http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${id}_${num}.jpg`}
-                alt=""
-              />
+              <LoadingSplash id={id} num={num} />
             </Skin>
           ))}
       </SkinList>

@@ -93,6 +93,7 @@ export const useChampionInformation = () => {
       loading: true,
     });
   };
+  const isLoading = () => currentChampion.loading;
 
-  return { setSkin, setSkill, setFind };
+  return { setSkin, setSkill, setFind, isLoading };
 };
