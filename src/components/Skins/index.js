@@ -1,6 +1,6 @@
 import React from 'react';
 
-import LoadingSplash from '~/components/LoadingSplash';
+import LoadingSplash from '~/components/Images/Splash';
 
 import { useChampion, useChampionInformation } from '~/services/hooks/Champion';
 

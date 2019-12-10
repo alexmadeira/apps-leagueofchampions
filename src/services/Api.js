@@ -1,7 +1,13 @@
 import axios from 'axios';
 
+import {
+  ddragonLanguage,
+  ddragonUrl,
+  ddragonVersion,
+} from '~/config/ddragonConfig';
+
 const api = axios.create({
-  baseURL: 'https://ddragon.leagueoflegends.com/cdn/9.23.1/data/pt_BR/',
+  baseURL: `${ddragonUrl}/${ddragonVersion}/data/${ddragonLanguage}/`,
 });
 
 export default api;

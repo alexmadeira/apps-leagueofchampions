@@ -1,42 +1,20 @@
 import React from 'react';
 
-import { Container, Skill } from './styles';
+import Skill from '~/components/Images/SkillIcon';
 
-import { useChampion, useChampionInformation } from '~/services/hooks/Champion';
+import { useChampion } from '~/services/hooks/Champion';
+
+import { Container } from './styles';
 
 export default function SpellList() {
-  const { passive, spells, activeSkill } = useChampion();
-  const { setSkill } = useChampionInformation();
+  const { passive, spells } = useChampion();
 
   return (
     <Container>
-      {passive && (
-        <Skill
-          onClick={() => {
-            setSkill(-1);
-          }}
-          className={activeSkill === -1 && 'active'}
-        >
-          <img
-            src={`http://ddragon.leagueoflegends.com/cdn/9.23.1/img/passive/${passive.image.full}`}
-            alt=""
-          />
-        </Skill>
-      )}
+      {passive && <Skill id={-1} src={`passive/${passive.image.full}`} />}
       {spells &&
-        spells.map(({ id, image }, index) => (
-          <Skill
-            key={id}
-            onClick={() => {
-              setSkill(index);
-            }}
-            className={activeSkill === index && 'active'}
-          >
-            <img
-              src={`http://ddragon.leagueoflegends.com/cdn/9.23.1/img/spell/${image.full}`}
-              alt=""
-            />
-          </Skill>
+        spells.map(({ id, image }) => (
+          <Skill key={id} id={id} src={`spell/${image.full}`} />
         ))}
     </Container>
   );

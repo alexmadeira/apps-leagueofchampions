@@ -7,5 +7,7 @@ const Colors = {
   Active: '#cbac62',
   Default: '#c8ccce',
   Base: '#67471f',
+  PreloadPrimaty: '#f3f3f3',
+  PreloadSecondary: '#b7b7b7',
 };
 export default Colors;

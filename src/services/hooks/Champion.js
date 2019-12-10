@@ -78,6 +78,7 @@ export const useChampionInformation = () => {
   };
 
   const setSkill = skill => {
+    console.tron.log(skill);
     setCurrentChampion({
       ...currentChampion,
       activeSkill: skill,
