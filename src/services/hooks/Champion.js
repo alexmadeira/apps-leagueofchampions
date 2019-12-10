@@ -1,5 +1,4 @@
 import { useState, useEffect, useContext } from 'react';
-import Case from 'case';
 
 import { findChampion, getChampionAll } from '~/services/Champions';
 
@@ -89,12 +88,12 @@ export const useChampionInformation = () => {
   };
 
   const setFind = find => {
-    const slug = Case.lower(find);
-    history.push(`/${slug}`);
+    history.push(`/${find}`);
 
     setCurrentChampion({
       ...currentChampion,
       find,
+      activeSkin: 0,
       search: false,
       loading: true,
     });

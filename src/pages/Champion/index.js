@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import Case from 'case';
 
 import { ChampionsProvider } from '~/contexts/ChampionContext';
 
@@ -14,10 +13,10 @@ import Logo from '~/assets/logo/riot.png';
 import { Container, Page, RiotLogo } from './styles';
 
 function Champion({ match: { params } }) {
-  const slug = Case.capital(params.slug);
+  const { slug } = params;
 
   const [currentChampion, setCurrentChampion] = useState({
-    find: slug || 'Aatrox',
+    find: slug,
     search: false,
     loading: true,
     searchList: {},
@@ -27,7 +26,7 @@ function Champion({ match: { params } }) {
   return (
     <ChampionsProvider value={{ currentChampion, setCurrentChampion }}>
       <Background />
-      <Container>
+      {/* <Container>
         <Search />
         <Nav />
         <Page>
@@ -38,7 +37,7 @@ function Champion({ match: { params } }) {
             </a>
           </RiotLogo>
         </Page>
-      </Container>
+      </Container> */}
     </ChampionsProvider>
   );
 }
