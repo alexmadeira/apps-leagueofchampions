@@ -13,13 +13,44 @@ export const Container = styled.div`
 
 export const Name = styled.h1`
   font-family: ${Fonts.family.Cinzel};
+
   line-height: 80px;
   font-size: 80px;
   text-transform: uppercase;
   font-weight: bold;
-  background: -webkit-linear-gradient(${Colors.Base}, ${Colors.Active});
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  position: relative;
+  color: ${Colors.Shadow};
+  position: relative;
+
+  &::after {
+    content: attr(data-name);
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    color: white;
+    background: -webkit-linear-gradient(${Colors.Base}, ${Colors.Active});
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    overflow: hidden;
+  }
+
+  @keyframes noise-anim-2 {
+    $steps: 20;
+    @for $i from 0 through $steps {
+      #{percentage($i*(1/$steps))} {
+        clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+      }
+    }
+  }
+  .glitch:before {
+    content: attr(data-text);
+    position: absolute;
+    left: -2px;
+    text-shadow: 1px 0 blue;
+    top: 0;
+    color: white;
+    background: ;
+  }
 `;
 export const TitleBox = styled.div`
   display: flex;

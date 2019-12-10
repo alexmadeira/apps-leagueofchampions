@@ -12,7 +12,7 @@ export default function ChampionInfo() {
   const { name, title } = useChampion();
   return (
     <Container>
-      <Name>{name}</Name>
+      <Name data-name={name}>{name}</Name>
       <TitleBox>
         <Title>{title}</Title>
         <Role />

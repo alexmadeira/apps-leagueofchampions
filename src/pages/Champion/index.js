@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import Case from 'case';
 
 import { ChampionsProvider } from '~/contexts/ChampionContext';
 
@@ -11,9 +13,11 @@ import Logo from '~/assets/logo/riot.png';
 
 import { Container, Page, RiotLogo } from './styles';
 
-export default function Champion() {
+function Champion({ match: { params } }) {
+  const slug = Case.capital(params.slug);
+
   const [currentChampion, setCurrentChampion] = useState({
-    find: 'Jinx',
+    find: slug || 'Aatrox',
     search: false,
     loading: true,
     searchList: {},
@@ -38,3 +42,8 @@ export default function Champion() {
     </ChampionsProvider>
   );
 }
+
+Champion.propTypes = {
+  match: PropTypes.shape({ params: PropTypes.shape().isRequired }).isRequired,
+};
+export default Champion;

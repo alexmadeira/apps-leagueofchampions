@@ -1,7 +1,10 @@
 import { useState, useEffect, useContext } from 'react';
+import Case from 'case';
+
 import { findChampion, getChampionAll } from '~/services/Champions';
 
 import ChampionContext from '~/contexts/ChampionContext';
+import history from '~/services/history';
 
 export const useChampion = () => {
   const [champion, setChampion] = useState({});
@@ -86,6 +89,9 @@ export const useChampionInformation = () => {
   };
 
   const setFind = find => {
+    const slug = Case.lower(find);
+    history.push(`/${slug}`);
+
     setCurrentChampion({
       ...currentChampion,
       find,

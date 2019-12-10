@@ -11,7 +11,6 @@ export default function SpellList() {
 
   return (
     <Container>
-      {console.tron.log(spells)}
       {passive && (
         <Skill
           id={-1}

@@ -3,6 +3,7 @@ const Colors = {
   Light: '#f7f7f7',
   LightShadow: 'rgba(255, 255, 255, 0.35)',
   DarkShadow: 'rgba(0, 0, 0, 0.15)',
+  Shadow: 'rgba(0, 0, 0, 0.8)',
   Black: '#000000',
   Active: '#cbac62',
   Default: '#c8ccce',
