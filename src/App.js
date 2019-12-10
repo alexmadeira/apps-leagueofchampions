@@ -7,12 +7,14 @@ import GlobalStyle from '~/styles/global';
 
 import Routes from '~/routes';
 import history from '~/services/history';
+import Footer from '~/components/Footer';
 
 function App() {
   return (
     <Router history={history}>
       <GlobalStyle />
       <Routes />
+      <Footer />
     </Router>
   );
 }
