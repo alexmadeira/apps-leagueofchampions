@@ -15,7 +15,6 @@ export const useChampion = () => {
 
   useEffect(() => {
     if (loading) {
-      console.tron.log(loading);
       const loadingChampion = async () => {
         const data = await findChampion(find);
 
