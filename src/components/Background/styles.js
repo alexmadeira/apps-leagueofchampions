@@ -36,7 +36,7 @@ export const VideoBox = styled.div`
   position: relative;
   opacity: 0;
   animation: ${videoLoad} 500ms linear;
-  animation-delay: 1s;
+  animation-delay: 1.5s;
   animation-fill-mode: forwards;
 `;
 export const Video = styled.video`
