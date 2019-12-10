@@ -1,18 +1,32 @@
-import Api from '~/services/Api';
+import Dragon from '~/services/Api/Dragon';
+import Universe from '~/services/Api/Universe';
 
-export const findChampion = async champion => {
-  if (!champion) return false;
-  const {
-    data: { data },
-  } = await Api.get(`champion/${champion}.json`);
+import history from '~/services/history';
 
-  return data[champion];
+export const findChampion = async championId => {
+  try {
+    const {
+      data: { data },
+    } = await Dragon.get(`champion/${championId}.json`);
+
+    const {
+      data: { champion },
+    } = await Universe.get(`champions/${championId.toLowerCase()}/index.json`);
+
+    data[championId] = { ...data[championId], championMore: champion };
+
+    return data[championId];
+  } catch (err) {
+    history.push('/Aatrox');
+    history.go();
+    return false;
+  }
 };
 
 export const getChampionAll = async () => {
   const {
     data: { data },
-  } = await Api.get(`champion.json`);
+  } = await Dragon.get(`champion.json`);
 
   return data;
 };

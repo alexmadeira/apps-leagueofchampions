@@ -6,8 +6,8 @@ import {
   ddragonVersion,
 } from '~/config/ddragonConfig';
 
-const api = axios.create({
+const dragon = axios.create({
   baseURL: `${ddragonUrl}/${ddragonVersion}/data/${ddragonLanguage}/`,
 });
 
-export default api;
+export default dragon;
