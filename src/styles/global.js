@@ -20,6 +20,7 @@ body,
   justify-content:space-between;
   flex:1;
   z-index: 1;
+  background:#0a0a0c;
 
 }
 body, input, button{
