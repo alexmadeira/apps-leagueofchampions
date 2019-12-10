@@ -11,10 +11,17 @@ export default function SpellList() {
 
   return (
     <Container>
-      {passive && <Skill id={-1} src={`passive/${passive.image.full}`} />}
+      {console.tron.log(spells)}
+      {passive && (
+        <Skill
+          id={-1}
+          name={passive.name}
+          src={`passive/${passive.image.full}`}
+        />
+      )}
       {spells &&
-        spells.map(({ id, image }) => (
-          <Skill key={id} id={id} src={`spell/${image.full}`} />
+        spells.map(({ id, image, name }, index) => (
+          <Skill key={id} id={index} name={name} src={`spell/${image.full}`} />
         ))}
     </Container>
   );

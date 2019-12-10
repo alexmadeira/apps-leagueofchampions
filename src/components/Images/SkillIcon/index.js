@@ -9,7 +9,7 @@ import { useChampion, useChampionInformation } from '~/services/hooks/Champion';
 import { Colors } from '~/styles/Metrics';
 import { Container, Icon } from './styles';
 
-function SkillIcon({ src, id }) {
+function SkillIcon({ src, id, name }) {
   const { setSkill } = useChampionInformation();
   const { activeSkill } = useChampion();
 
@@ -22,6 +22,8 @@ function SkillIcon({ src, id }) {
     >
       <Icon
         src={`${ddragonUrl}/${ddragonVersion}/img/${src}`}
+        alt={name}
+        title={name}
         loader={
           <ContentLoader
             height={55}
@@ -38,6 +40,7 @@ function SkillIcon({ src, id }) {
 
 SkillIcon.propTypes = {
   src: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
 };
 export default SkillIcon;
