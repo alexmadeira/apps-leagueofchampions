@@ -26,7 +26,7 @@ function Champion({ match: { params } }) {
   return (
     <ChampionsProvider value={{ currentChampion, setCurrentChampion }}>
       <Background />
-      {/* <Container>
+      <Container>
         <Search />
         <Nav />
         <Page>
@@ -37,7 +37,7 @@ function Champion({ match: { params } }) {
             </a>
           </RiotLogo>
         </Page>
-      </Container> */}
+      </Container>
     </ChampionsProvider>
   );
 }
