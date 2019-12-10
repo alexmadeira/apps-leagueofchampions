@@ -1,6 +1,6 @@
 const Fonts = {
   sizes: {
-    Small: '18px',
+    Small: '16px',
     Middle: '20px',
     Bigger: '40px',
     Icons: '25px',

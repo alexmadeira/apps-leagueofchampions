@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Container, Champion } from './styles';
+import { Container, Champion, Splash, Name } from './styles';
 import { useChampionInformation } from '~/services/hooks/Champion';
 
 function ChampionList({ list }) {
@@ -16,15 +16,16 @@ function ChampionList({ list }) {
           const { id, name } = item[1];
           return (
             <Champion
-              key={name}
+              key={id}
               onClick={() => {
                 setFind(id);
               }}
             >
-              <img
+              <Splash
                 src={`http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${id}_0.jpg`}
                 alt={name}
               />
+              <Name>{name}</Name>
             </Champion>
           );
         })}
