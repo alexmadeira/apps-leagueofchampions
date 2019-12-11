@@ -3,10 +3,10 @@ import { FaTimes } from 'react-icons/fa';
 
 import ChampionList from '~/components/ChampionList';
 
-import { Container, Close, SearchBox, SearchForm, ResultBox } from './styles';
-
 import { useSearch } from '~/services/hooks/Search';
 import { useAllChampion } from '~/services/hooks/Champion';
+
+import { Container, Close, SearchBox, SearchForm } from './styles';
 
 export default function Search() {
   const [searchChampion, setSearchChampion] = useState(false);
@@ -35,9 +35,10 @@ export default function Search() {
           />
         </SearchForm>
       </SearchBox>
-      <ResultBox className={searchChampion && 'active'}>
-        <ChampionList list={championList || {}} />
-      </ResultBox>
+      <ChampionList
+        height={searchChampion && '85vh'}
+        list={championList || {}}
+      />
     </Container>
   );
 }

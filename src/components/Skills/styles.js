@@ -14,7 +14,7 @@ export const SkillDescriptionBox = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  margin-top: calc(${Spaces.BaseMargin} * 2);
+  margin-top: calc(${Spaces.BaseMargin});
 `;
 
 export const SkillName = styled.p`

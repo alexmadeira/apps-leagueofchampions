@@ -5,10 +5,9 @@ import { Spaces, Colors } from '~/styles/Metrics';
 
 export const Container = styled(Scrollbar)`
   width: 60vw !important;
-  height: 185px !important;
+  height: 215px !important;
   justify-self: flex-end;
   margin-top: auto;
-  margin-bottom: calc(${Spaces.BaseMargin} * 2);
 `;
 
 export const SkinList = styled.ul`
@@ -17,17 +16,17 @@ export const SkinList = styled.ul`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-top: calc(${Spaces.BaseMargin} * 2);
 `;
 
 export const Skin = styled.li`
-  margin: 0 ${Spaces.BaseMargin};
+  margin: 0 calc(${Spaces.BaseMargin} * 2) 0 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   cursor: pointer;
-  height: 140px;
-  min-width: 75px;
+  height: 200px;
+
   &:hover {
     box-shadow: 0px 0px 10px 5px ${Colors.DarkShadow};
     img {

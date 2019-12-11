@@ -57,18 +57,3 @@ export const SearchForm = styled.div`
     font-size: ${Fonts.sizes.Bigger};
   }
 `;
-
-export const ResultBox = styled.div`
-  flex-direction: row;
-  flex-wrap: wrap;
-  transition: all 500ms linear;
-  display: flex;
-  overflow-y: scroll;
-  visibility: hidden;
-  height: 0;
-  width: 100%;
-  &.active {
-    visibility: visible;
-    height: 85vh;
-  }
-`;

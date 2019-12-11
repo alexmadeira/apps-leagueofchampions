@@ -1,6 +1,6 @@
 import React from 'react';
 
-import LoadingSplash from '~/components/Images/Splash';
+import Splash from '~/components/Images/Splash';
 
 import { useChampion, useChampionInformation } from '~/services/hooks/Champion';
 
@@ -12,7 +12,7 @@ export default function Skins() {
 
   return (
     <Container>
-      <SkinList width={skins && skins.length * (75 + 30)}>
+      <SkinList width={skins && skins.length * (75 + 30)} noScrollY>
         {skins &&
           skins.map(({ num }) => (
             <Skin
@@ -20,9 +20,8 @@ export default function Skins() {
               onClick={() => {
                 setSkin(num);
               }}
-              className={activeSkin === num && 'active'}
             >
-              <LoadingSplash id={id} num={num} />
+              <Splash id={id} num={num} retire={activeSkin !== num} />
             </Skin>
           ))}
       </SkinList>

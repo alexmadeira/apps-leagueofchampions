@@ -1,40 +1,47 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Container, Champion, Splash, Name } from './styles';
 import { useChampionInformation } from '~/services/hooks/Champion';
 
-function ChampionList({ list }) {
+import Splash from '~/components/Images/Splash';
+
+import { Container, ChampionContentList, Champion } from './styles';
+
+function ChampionList({ list, height }) {
   const { setFind } = useChampionInformation();
 
   const listArray = Object.entries(list);
 
   return (
-    <Container>
-      {listArray &&
-        listArray.map(item => {
-          const { id, name } = item[1];
-          return (
-            <Champion
-              key={id}
-              onClick={() => {
-                setFind(id);
-              }}
-            >
-              <Splash
-                src={`http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${id}_0.jpg`}
-                alt={name}
-              />
-              <Name>{name}</Name>
-            </Champion>
-          );
-        })}
+    <Container height={height}>
+      {listArray && (
+        <ChampionContentList>
+          {listArray.map(item => {
+            const { id, name } = item[1];
+            return (
+              <Champion
+                key={id}
+                onClick={() => {
+                  setFind(id);
+                }}
+              >
+                <Splash id={id} num="0" name={name} />
+              </Champion>
+            );
+          })}
+        </ChampionContentList>
+      )}
     </Container>
   );
 }
 
+ChampionList.defaultProps = {
+  height: '',
+};
+
 ChampionList.propTypes = {
   list: PropTypes.shape().isRequired,
+  height: PropTypes.string,
 };
 
 export default ChampionList;
