@@ -25,7 +25,7 @@ function ChampionList({ list, height }) {
                   setFind(id);
                 }}
               >
-                <Splash id={id} num="0" name={name} />
+                <Splash id={id} num={0} name={name} />
               </Champion>
             );
           })}
