@@ -28,7 +28,7 @@ function Champion({ match: { params } }) {
       <Background />
       <Container>
         <Search />
-        <Nav />
+        {/* <Nav />
         <Page>
           <ChampionInfo />
           <RiotLogo>
@@ -36,7 +36,7 @@ function Champion({ match: { params } }) {
               <img src={Logo} alt="" />
             </a>
           </RiotLogo>
-        </Page>
+        </Page> */}
       </Container>
     </ChampionsProvider>
   );

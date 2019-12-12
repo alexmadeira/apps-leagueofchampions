@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from 'react';
+import { useState, useEffect, useContext, useCallback } from 'react';
 
 import { findChampion, getChampionAll } from '~/services/Champions';
 
@@ -13,26 +13,21 @@ export const useChampion = () => {
     setCurrentChampion,
   } = useContext(ChampionContext);
 
-  useEffect(() => {
+  const loadingChampion = useCallback(async () => {
     if (loading) {
-      const loadingChampion = async () => {
-        const data = await findChampion(find);
+      const data = await findChampion(find);
 
-        setChampion({
-          ...data,
-          activeSkin: activeSkin || 0,
-          activeSkill,
-          search,
-        });
-        setCurrentChampion({ ...currentChampion, loading: false });
-      };
-
-      loadingChampion();
+      setChampion({
+        ...data,
+        activeSkin: activeSkin || 0,
+        activeSkill,
+        search,
+      });
+      setCurrentChampion({ ...currentChampion, loading: false });
     }
   }, [
     activeSkill,
     activeSkin,
-    champion,
     currentChampion,
     find,
     loading,
@@ -40,37 +35,36 @@ export const useChampion = () => {
     setCurrentChampion,
   ]);
 
+  useEffect(() => {
+    loadingChampion();
+  }, [loading, loadingChampion]);
+
   return champion;
 };
 
 export const useAllChampion = () => {
-  const [champions, setChampions] = useState({});
   const {
     currentChampion: { allChampions },
-    currentChampion,
     setCurrentChampion,
   } = useContext(ChampionContext);
 
-  useEffect(() => {
+  const loadingAllChampions = useCallback(async () => {
     if (!allChampions) {
-      const loadingAllChampions = async () => {
-        const data = await getChampionAll();
+      console.tron.log('allChampions');
+      const data = await getChampionAll();
 
-        setChampions(data);
-        setCurrentChampion({
-          ...currentChampion,
-          allChampions: data,
-          searchList: data,
-        });
-      };
-
-      loadingAllChampions();
-    } else {
-      setChampions(allChampions);
+      setCurrentChampion({
+        allChampions: data,
+        searchList: data,
+      });
     }
-  }, [allChampions, currentChampion, setCurrentChampion]);
+  }, [allChampions, setCurrentChampion]);
 
-  return champions;
+  useEffect(() => {
+    loadingAllChampions();
+  }, [loadingAllChampions]);
+
+  return allChampions;
 };
 
 export const useChampionInformation = () => {
