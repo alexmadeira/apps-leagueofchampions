@@ -14,7 +14,7 @@ function App() {
     <Router history={history}>
       <GlobalStyle />
       <Routes />
-      {/* <Footer /> */}
+      <Footer />
     </Router>
   );
 }
