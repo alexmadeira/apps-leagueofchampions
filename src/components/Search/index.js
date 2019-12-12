@@ -36,7 +36,7 @@ export default function Search() {
         </SearchForm>
       </SearchBox>
       <ChampionList
-        height={searchChampion && '85vh'}
+        height={searchChampion ? '85vh' : ''}
         list={championList || {}}
       />
     </Container>
