@@ -1,6 +1,7 @@
 import React from 'react';
 import { useChampion } from '~/services/hooks/Champion';
 
+import { ddragonUrl } from '~/config/ddragonConfig';
 import { Container, VideoBox, Video, PreLoad } from './styles';
 
 export default function Background() {
@@ -11,10 +12,10 @@ export default function Background() {
       {championMore && championMore.video && activeSkin === 0 && (
         <VideoBox>
           <Video
-            autoPlay="true"
-            loop="true"
+            autoPlay
+            loop
             preload="auto"
-            src={`${championMore.video.uri}?autoPlay=true&loop=true`}
+            src={`${championMore.video.uri}`}
           />
         </VideoBox>
       )}
@@ -22,7 +23,7 @@ export default function Background() {
         {skins &&
           skins.map(({ num, name }) => (
             <img
-              src={`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${id}_${num}.jpg`}
+              src={`${ddragonUrl}/img/champion/splash/${id}_${num}.jpg`}
               key={num}
               alt={name}
             />
