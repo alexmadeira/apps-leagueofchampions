@@ -5,15 +5,15 @@ import '~/config/ReactotronConfig';
 
 import GlobalStyle from '~/styles/global';
 
-import Routes from '~/routes';
+import Pages from '~/pages';
 import history from '~/services/history';
-import Footer from '~/components/Footer';
+import Footer from '~/components/Statics/Footer';
 
 function App() {
   return (
     <Router history={history}>
       <GlobalStyle />
-      <Routes />
+      <Pages />
       <Footer />
     </Router>
   );

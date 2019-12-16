@@ -1,14 +1,13 @@
 import styled from 'styled-components';
 
-import { Spaces, Colors, Fonts } from '~/styles/Metrics';
+import { Colors, Fonts, Spaces } from '~/styles/Metrics';
 
 export const Container = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  z-index: 2;
-  flex: 5;
-  padding: 0 calc(${Spaces.BasePadding} * 4);
+  margin: ${Spaces.BaseMargin};
+  margin-left: calc(${Spaces.BaseMargin} * 5);
 `;
 
 export const Name = styled.h1`
@@ -32,24 +31,6 @@ export const Name = styled.h1`
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     overflow: hidden;
-  }
-
-  @keyframes noise-anim-2 {
-    $steps: 20;
-    @for $i from 0 through $steps {
-      #{percentage($i*(1/$steps))} {
-        clip: rect(random(100) + px, 9999px, random(100) + px, 0);
-      }
-    }
-  }
-  .glitch:before {
-    content: attr(data-text);
-    position: absolute;
-    left: -2px;
-    text-shadow: 1px 0 blue;
-    top: 0;
-    color: white;
-    background: ;
   }
 `;
 export const TitleBox = styled.div`

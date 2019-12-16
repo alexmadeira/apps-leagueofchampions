@@ -1,20 +1,20 @@
 import React from 'react';
-import { FaSearch } from 'react-icons/fa';
+import { NavLink } from 'react-router-dom';
 
-import { Container, Logo, Menu, MenuItem } from './styles';
-import { useSearch } from '~/services/hooks/Search';
+import { Container, NavItem } from './styles';
 
 export default function Nav() {
-  const { toogleSearch } = useSearch();
-
   return (
     <Container>
-      <Logo href="/#">League of Champions</Logo>
-      <Menu>
-        <MenuItem onClick={() => toogleSearch()}>
-          <FaSearch />
-        </MenuItem>
-      </Menu>
+      <NavItem>
+        <NavLink to="/skins" />
+      </NavItem>
+      <NavItem>
+        <NavLink to="/skills" />
+      </NavItem>
+      <NavItem>
+        <NavLink to="/lore" />
+      </NavItem>
     </Container>
   );
 }

@@ -1,8 +1,6 @@
 import React from 'react';
 
-import Skills from '~/components/Skills';
 import Role from '~/components/Role';
-import Skins from '~/components/Skins';
 
 import { Container, Name, TitleBox, Title } from './styles';
 
@@ -17,8 +15,6 @@ export default function ChampionInfo() {
         <Title>{title}</Title>
         <Role />
       </TitleBox>
-      <Skills />
-      <Skins />
     </Container>
   );
 }

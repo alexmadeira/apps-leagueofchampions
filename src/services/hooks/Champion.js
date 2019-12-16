@@ -3,7 +3,6 @@ import { useState, useEffect, useContext } from 'react';
 import { findChampion, getChampionAll } from '~/services/Champions';
 
 import ChampionContext from '~/contexts/ChampionContext';
-import history from '~/services/history';
 
 export const useChampion = () => {
   const [champion, setChampion] = useState({});
@@ -92,8 +91,6 @@ export const useChampionInformation = () => {
   };
 
   const setFind = find => {
-    history.push(`/${find}`);
-
     setCurrentChampion({
       ...currentChampion,
       find,
