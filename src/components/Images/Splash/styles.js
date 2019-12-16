@@ -23,7 +23,7 @@ export const Container = styled.div`
   }
 `;
 export const Imagem = styled(Img)`
-  height: 100%;
+  width: 100%;
 `;
 
 export const Name = styled.h2`

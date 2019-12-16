@@ -7,7 +7,8 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-self: flex-end;
-  padding: 0 calc(${Spaces.BaseMargin} * 3);
+  margin-bottom: ${Spaces.BaseMargin};
+  padding: 0 calc(${Spaces.BasePadding} * 3);
 
   img {
     max-width: 100%;
