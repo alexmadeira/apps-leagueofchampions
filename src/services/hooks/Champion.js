@@ -21,6 +21,7 @@ export const useChampion = () => {
         activeSkill: activeSkill === false ? -1 : activeSkill,
         search,
       });
+      document.title = `${data.name} - ${data.title}`;
       setCurrentChampion({ ...currentChampion, loading: false });
     }
   }, [

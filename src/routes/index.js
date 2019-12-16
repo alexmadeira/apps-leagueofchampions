@@ -8,9 +8,9 @@ import Skills from '~/pages/Skills';
 export default function Routes() {
   return (
     <Switch>
-      <Route path="/" exact component={Skills} />
-      <Route path="/skills" component={Skills} />
+      <Route path="/" exact component={Skins} />
       <Route path="/skins" component={Skins} />
+      <Route path="/skills" component={Skills} />
       <Route path="/lore" component={Lore} />
     </Switch>
   );

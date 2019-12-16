@@ -4,12 +4,10 @@ import Skills from '~/components/Skills';
 
 import { Container } from './styles';
 
-function Champion() {
+export default function SkillsPage() {
   return (
     <Container>
       <Skills />
     </Container>
   );
 }
-
-export default Champion;
