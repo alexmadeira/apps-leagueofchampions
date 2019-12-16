@@ -1,8 +1,6 @@
 import Dragon from '~/services/Api/Dragon';
 import Universe from '~/services/Api/Universe';
 
-import history from '~/services/history';
-
 export const findChampion = async championId => {
   try {
     const {
