@@ -12,7 +12,7 @@ export default function Skins() {
 
   return (
     <Container>
-      <SkinList width={skins && skins.length * (75 + 30)} noScrollY>
+      <SkinList>
         {skins &&
           skins.map(({ num }) => (
             <Skin

@@ -10,6 +10,9 @@ export const Container = styled.div`
   position: relative;
   overflow: hidden;
   transition: all 300ms linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   &.retire {
     opacity: 0.5;
     filter: grayscale(1);

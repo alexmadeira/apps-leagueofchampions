@@ -4,28 +4,27 @@ import Scrollbar from 'react-scrollbars-custom';
 import { Spaces, Colors } from '~/styles/Metrics';
 
 export const Container = styled(Scrollbar)`
-  width: 60vw !important;
-  height: 215px !important;
-  justify-self: flex-end;
+  height: 100%;
+  width: 100%;
   margin-top: auto;
 `;
 
 export const SkinList = styled.ul`
-  width: ${props => (props.width ? props.width : '')}px;
   list-style: none;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
 `;
 
 export const Skin = styled.li`
-  margin: 0 calc(${Spaces.BaseMargin} * 2) 0 0;
+  margin: calc(${Spaces.BaseMargin});
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   cursor: pointer;
-  height: 200px;
+  width: 125px;
 
   &:hover {
     box-shadow: 0px 0px 10px 5px ${Colors.DarkShadow};

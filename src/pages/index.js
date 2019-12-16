@@ -15,7 +15,7 @@ import { Container, Page } from './styles';
 
 function Pages() {
   const [currentChampion, setCurrentChampion] = useState({
-    find: 'Aatrox',
+    find: 'Alistar',
     search: false,
     loading: true,
     activeSkill: false,

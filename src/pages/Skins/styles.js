@@ -1,3 +1,12 @@
 import styled from 'styled-components';
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-height: 100%;
+  max-width: 100%;
+  height: 55vh;
+`;

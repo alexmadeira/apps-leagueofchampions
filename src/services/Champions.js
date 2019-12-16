@@ -17,8 +17,6 @@ export const findChampion = async championId => {
 
     return data[championId];
   } catch (err) {
-    history.push('/Aatrox');
-    history.go();
     return false;
   }
 };
