@@ -10,7 +10,7 @@ export const Container = styled.nav`
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  padding: ${Spaces.BasePadding} calc(${Spaces.BasePadding} * 4);
+  padding: ${Spaces.BasePadding} calc(${Spaces.BasePadding} * 5);
   position: relative;
   z-index: 1;
   margin-bottom: 15px;

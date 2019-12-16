@@ -16,10 +16,18 @@ const getSkill = champion => {
   const { activeSkill, passive, spells } = champion;
   const buttons = ['q', 'w', 'e', 'r'];
 
-  if (activeSkill >= 0) {
-    return { button: buttons[activeSkill], skill: spells[activeSkill] };
+  if (activeSkill >= -1) {
+    if (activeSkill >= 0) {
+      return { button: buttons[activeSkill], skill: spells[activeSkill] };
+    }
+
+    return {
+      button: 'Passiva',
+      skill: passive,
+    };
   }
-  return { button: 'Passiva', skill: passive || { name: '', description: '' } };
+
+  return { button: '', skill: { name: '', description: '' } };
 };
 
 export default function Skills() {
@@ -34,7 +42,8 @@ export default function Skills() {
       <SkillList />
       <SkillDescriptionBox>
         <SkillName>
-          <strong>{button}</strong> - {name}
+          <strong>{button}</strong>
+          {name && ` - ${name}`}
         </SkillName>
         <SkillDescription>{stripHtml(description)}</SkillDescription>
       </SkillDescriptionBox>

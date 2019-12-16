@@ -18,8 +18,8 @@ function Pages() {
     find: 'Aatrox',
     search: false,
     loading: true,
+    activeSkill: false,
     searchList: {},
-    activeSkill: -1,
   });
 
   return (

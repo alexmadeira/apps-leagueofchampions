@@ -15,11 +15,10 @@ export const useChampion = () => {
   const loadingChampion = useCallback(async () => {
     if (loading) {
       const data = await findChampion(find);
-
       setChampion({
         ...data,
         activeSkin: activeSkin || 0,
-        activeSkill,
+        activeSkill: activeSkill === false ? -1 : activeSkill,
         search,
       });
       setCurrentChampion({ ...currentChampion, loading: false });
@@ -42,22 +41,17 @@ export const useChampion = () => {
 };
 
 export const useAllChampion = () => {
-  const {
-    currentChampion: { allChampions },
-    setCurrentChampion,
-  } = useContext(ChampionContext);
+  const { currentChampion, setCurrentChampion } = useContext(ChampionContext);
+
+  const [allChampions, setAllChampions] = useState(false);
 
   const loadingAllChampions = useCallback(async () => {
     if (!allChampions) {
-      console.tron.log('allChampions');
       const data = await getChampionAll();
-
-      setCurrentChampion({
-        allChampions: data,
-        searchList: data,
-      });
+      setCurrentChampion({ ...currentChampion, searchList: data });
+      setAllChampions(data);
     }
-  }, [allChampions, setCurrentChampion]);
+  }, [allChampions, currentChampion, setCurrentChampion]);
 
   useEffect(() => {
     loadingAllChampions();
@@ -68,6 +62,14 @@ export const useAllChampion = () => {
 
 export const useChampionInformation = () => {
   const { currentChampion, setCurrentChampion } = useContext(ChampionContext);
+
+  const setLoading = () => {
+    setCurrentChampion({
+      ...currentChampion,
+      loading: true,
+    });
+  };
+
   const setSkin = skin => {
     setCurrentChampion({
       ...currentChampion,
@@ -77,6 +79,7 @@ export const useChampionInformation = () => {
   };
 
   const setSkill = skill => {
+    console.tron.log(skill);
     setCurrentChampion({
       ...currentChampion,
       activeSkill: skill,
@@ -93,7 +96,8 @@ export const useChampionInformation = () => {
       loading: true,
     });
   };
+
   const isLoading = () => currentChampion.loading;
 
-  return { setSkin, setSkill, setFind, isLoading };
+  return { setSkin, setSkill, setFind, isLoading, setLoading };
 };

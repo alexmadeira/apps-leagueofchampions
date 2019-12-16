@@ -17,7 +17,7 @@ body,
   height: 100%;
   display:flex;
   flex-direction:column;
-  justify-content:space-between;
+  justify-content:flex-start;
   flex:1;
   z-index: 1;
   background:#0a0a0c;
