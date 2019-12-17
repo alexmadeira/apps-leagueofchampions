@@ -1,14 +1,27 @@
 import styled from 'styled-components';
-import { Spaces } from '~/styles/Metrics';
+import Scrollbar from 'react-scrollbars-custom';
+import { rgba } from 'polished';
+
+import { Spaces, Colors } from '~/styles/Metrics';
 
 export const Container = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   transition: all 500ms linear;
   display: flex;
-  overflow-y: scroll;
-  height: ${props => (props.height ? props.height : '0')};
+  height: ${props => (props.height ? props.height : '85vh')};
   width: 100%;
+`;
+export const ChampionContent = styled(Scrollbar)`
+  .ScrollbarsCustom-Track {
+    background: ${rgba(Colors.Base, 0.4)}!important;
+  }
+  .ScrollbarsCustom-Thumb {
+    background: ${rgba(Colors.Active, 0.4)}!important;
+  }
+  .ScrollbarsCustom-Content {
+    padding-bottom: calc(${Spaces.BasePadding} * 2) !important;
+  }
 `;
 
 export const ChampionContentList = styled.ul`
