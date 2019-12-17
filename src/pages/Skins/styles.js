@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { rgba } from 'polished';
 
-import { Colors, Spaces } from '~/styles/Metrics';
+import { Colors, Spaces, Breakpoints } from '~/styles/Metrics';
 
 export const Container = styled.div`
   display: flex;
@@ -11,7 +11,6 @@ export const Container = styled.div`
   align-items: flex-start;
   height: calc(100% - ${Spaces.BasePadding} - 33px);
   max-width: 100%;
-
   margin-top: calc(${Spaces.BaseMargin} * 2);
 `;
 
@@ -47,6 +46,9 @@ export const ToogleSkins = styled.div`
   right: -51px;
   z-index: 5;
   transition: all 1s ease;
+  ${Breakpoints.md} {
+    display: none;
+  }
   svg {
     transition: all 300ms ease;
   }

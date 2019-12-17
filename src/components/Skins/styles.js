@@ -24,7 +24,8 @@ export const Skin = styled.li`
   align-items: center;
   flex-direction: column;
   cursor: pointer;
-  width: 125px;
+  flex: 1;
+  min-width: 200px;
 
   &:hover {
     box-shadow: 0px 0px 10px 5px ${Colors.DarkShadow};

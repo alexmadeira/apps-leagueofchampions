@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { Colors } from '~/styles/Metrics';
 
 export default createGlobalStyle`
 * {
@@ -14,13 +15,13 @@ export default createGlobalStyle`
 html,
 body,
 #root {
-  height: 100%;
+  min-height: 100vh;
   display:flex;
   flex-direction:column;
   justify-content:flex-start;
   flex:1;
   z-index: 1;
-  background:#0a0a0c;
+  background:${Colors.Background};
 
 }
 body, input, button{

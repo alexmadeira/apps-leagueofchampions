@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Colors, Fonts, Spaces } from '~/styles/Metrics';
+import { Colors, Fonts, Spaces, Breakpoints } from '~/styles/Metrics';
 
 export const Container = styled.div`
   position: relative;
@@ -8,6 +8,10 @@ export const Container = styled.div`
   flex-direction: column;
   margin: ${Spaces.BaseMargin};
   margin-left: calc(${Spaces.BaseMargin} * 5);
+  ${Breakpoints.sm} {
+    margin-left: ${Spaces.BaseMargin};
+    flex-direction: column;
+  }
 `;
 
 export const Name = styled.h1`
@@ -20,6 +24,9 @@ export const Name = styled.h1`
   position: relative;
   color: ${Colors.Shadow};
   position: relative;
+  ${Breakpoints.sm} {
+    font-size: 40px;
+  }
 
   &::after {
     content: attr(data-name);
@@ -37,6 +44,10 @@ export const TitleBox = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  ${Breakpoints.sm} {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 `;
 export const Title = styled.p`
   font-family: ${Fonts.family.Cinzel};
@@ -48,4 +59,7 @@ export const Title = styled.p`
   align-items: center;
   color: ${Colors.Default};
   text-shadow: 3px 2px 2px ${Colors.Black};
+  ${Breakpoints.sm} {
+    font-size: 20px;
+  }
 `;

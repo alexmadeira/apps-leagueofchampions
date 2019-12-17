@@ -15,7 +15,7 @@ import { Container, Page } from './styles';
 
 function Pages() {
   const [currentChampion, setCurrentChampion] = useState({
-    find: 'Vi',
+    find: 'Aatrox',
     search: false,
     loading: true,
     activeSkill: false,
@@ -25,10 +25,10 @@ function Pages() {
   return (
     <ChampionsProvider value={{ currentChampion, setCurrentChampion }}>
       <Background />
-      <Nav />
       <Search />
       <Header />
       <ChampionInfo />
+      <Nav />
       <Container>
         <Page>
           <Routes />

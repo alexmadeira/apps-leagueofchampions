@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Spaces } from '~/styles/Metrics';
+import { Spaces, Breakpoints } from '~/styles/Metrics';
 
 export const Container = styled.div`
   display: flex;
@@ -8,6 +8,10 @@ export const Container = styled.div`
   align-items: flex-start;
   flex: 1;
   margin-left: calc(${Spaces.BaseMargin} * 5);
+  ${Breakpoints.md} {
+    flex-direction: column;
+    margin-left: 0;
+  }
 `;
 
 export const Page = styled.div`

@@ -11,7 +11,7 @@ export default function Skins() {
   const { setSkin } = useChampionInformation();
 
   return (
-    <Container>
+    <Container mobileNative>
       <SkinList>
         {skins &&
           skins.map(({ num }) => (

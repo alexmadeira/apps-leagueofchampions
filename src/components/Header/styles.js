@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Spaces, Colors } from '~/styles/Metrics';
+import { Spaces, Colors, Breakpoints } from '~/styles/Metrics';
 
 import logoImage from '~/assets/logo/lol.png';
 import Fonts from '~/styles/Metrics/fonts';
@@ -14,6 +14,9 @@ export const Container = styled.nav`
   position: relative;
   z-index: 1;
   margin-bottom: 15px;
+  ${Breakpoints.sm} {
+    padding: ${Spaces.BasePadding};
+  }
 `;
 
 export const Logo = styled.a`

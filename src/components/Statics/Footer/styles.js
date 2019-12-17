@@ -6,7 +6,7 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   justify-self: flex-end;
-  background: ${Colors.FooterBackground};
+  background: ${Colors.Background};
   color: ${Colors.Light};
   font-size: 14px;
   padding: 7px 0;

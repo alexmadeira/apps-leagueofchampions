@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Spaces, Colors } from '~/styles/Metrics';
+import { Spaces, Colors, Breakpoints } from '~/styles/Metrics';
 
 export const Container = styled.ul`
   display: flex;
@@ -14,11 +14,28 @@ export const Container = styled.ul`
   left: calc(${Spaces.BaseMargin} * 1.2);
   top: 50%;
   transform: translate(0px, -50%);
+  ${Breakpoints.md} {
+    flex-direction: row;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    position: initial;
+    transform: initial;
+  }
 `;
 
 export const NavItem = styled.li`
   margin: calc(${Spaces.BaseMargin} * 1.3) 0;
-
+  ${Breakpoints.md} {
+    position: initial;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
   a {
     display: flex;
     justify-content: center;

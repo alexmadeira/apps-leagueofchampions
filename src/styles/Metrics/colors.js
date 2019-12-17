@@ -11,6 +11,6 @@ const Colors = {
   Base: '#67471f',
   PreloadPrimaty: '#f3f3f3',
   PreloadSecondary: '#b7b7b7',
-  FooterBackground: '#0a0a0c',
+  Background: '#0a0a0c',
 };
 export default Colors;
