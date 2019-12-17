@@ -17,7 +17,6 @@ export const Container = styled.div`
 
 export const LoreContent = styled(Scrollbar)`
   .ScrollbarsCustom-Content {
-    background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 30%);
     padding-bottom: calc(${Spaces.BasePadding} * 2) !important;
     padding-top: calc(${Spaces.BasePadding} * 2) !important;
     p {
