@@ -1,19 +1,18 @@
 import styled from 'styled-components';
 import { rgba } from 'polished';
 
-import { Colors } from '~/styles/Metrics';
+import { Colors, Spaces } from '~/styles/Metrics';
 
 export const Container = styled.div`
   display: flex;
   flex-direction: row;
   flex: 1;
-
   justify-content: flex-start;
   align-items: flex-start;
-  max-height: 100%;
+  max-height: 370px;
   max-width: 100%;
-  height: 55vh;
-  margin-top: 100px;
+  height: 100vh;
+  margin-top: calc(${Spaces.BaseMargin} * 2);
 `;
 
 export const SkinsBox = styled.div`
@@ -45,7 +44,7 @@ export const ToogleSkins = styled.div`
   display: flex;
   line-height: 1px;
   position: absolute;
-  right: 0;
+  right: -51px;
   z-index: 5;
   transition: all 1s ease;
   svg {
@@ -55,7 +54,6 @@ export const ToogleSkins = styled.div`
     background: ${Colors.DarkHover};
   }
   &.close {
-    right: -51px;
     svg {
       transform: rotate(180deg);
     }
