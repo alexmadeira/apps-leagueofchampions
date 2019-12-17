@@ -15,5 +15,6 @@ export const Page = styled.div`
   flex-direction: row;
   flex: 8;
   width: 100%;
+  height: 100%;
   padding: 0 ${Spaces.BasePadding};
 `;

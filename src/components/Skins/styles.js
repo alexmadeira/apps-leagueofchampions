@@ -4,9 +4,9 @@ import Scrollbar from 'react-scrollbars-custom';
 import { Spaces, Colors } from '~/styles/Metrics';
 
 export const Container = styled(Scrollbar)`
-  height: 100%;
-  width: 100%;
-  margin-top: auto;
+  .ScrollbarsCustom-Content {
+    padding-bottom: calc(${Spaces.BasePadding} * 2) !important;
+  }
 `;
 
 export const SkinList = styled.ul`
