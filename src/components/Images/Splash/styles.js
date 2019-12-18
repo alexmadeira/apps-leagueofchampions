@@ -23,10 +23,13 @@ export const Container = styled.div`
   }
   svg {
     height: 100%;
+    flex: 1;
   }
 `;
 export const Imagem = styled(Img)`
   width: 100%;
+  height: 100%;
+  flex: 1;
 `;
 
 export const Name = styled.h2`

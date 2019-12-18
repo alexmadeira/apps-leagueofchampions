@@ -26,7 +26,7 @@ export const Skin = styled.li`
   cursor: pointer;
   flex: 1;
   min-width: 200px;
-
+  max-width: 320px;
   &:hover {
     box-shadow: 0px 0px 10px 5px ${Colors.DarkShadow};
     img {

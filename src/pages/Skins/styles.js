@@ -9,7 +9,7 @@ export const Container = styled.div`
   flex: 1;
   justify-content: flex-start;
   align-items: flex-start;
-  height: calc(100% - ${Spaces.BasePadding} - 33px);
+  min-height: calc(100% - ${Spaces.BasePadding} - 33px);
   max-width: 100%;
   margin-top: calc(${Spaces.BaseMargin} * 2);
 `;
