@@ -11,6 +11,7 @@ function Splash({ id, num, name, retire }) {
     <Container className={retire && 'retire'}>
       <Imagem
         src={`${ddragonUrl}/img/champion/loading/${id}_${num}.jpg`}
+        crossorigin="anonymous"
         loader={
           <ContentLoader
             height={100}

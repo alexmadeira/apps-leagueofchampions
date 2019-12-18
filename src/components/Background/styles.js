@@ -9,14 +9,21 @@ const videoLoad = keyframes`
 `;
 
 export const Container = styled.div`
-  background-image: linear-gradient(
-      ${rgba(Colors.Background, 0)} 0%,
-      ${Colors.Background} 48%
-    ),
-    ${props =>
-      props.skin
-        ? `url(http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${props.skin}.jpg)`
-        : `url()`};
+  background-image: ${props =>
+    props.skin
+      ? `url(http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${props.skin}.jpg)`
+      : `url()`};
+
+  ${Breakpoints.md} {
+    background-image: linear-gradient(
+        ${rgba(Colors.Background, 0)} 0%,
+        ${Colors.Background} 48%
+      ),
+      ${props =>
+        props.skin
+          ? `url(http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${props.skin}.jpg)`
+          : `url()`};
+  }
 
   background-size: cover;
   background-position: top center;

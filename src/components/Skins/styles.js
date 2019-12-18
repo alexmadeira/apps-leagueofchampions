@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Scrollbar from 'react-scrollbars-custom';
 
-import { Spaces, Colors } from '~/styles/Metrics';
+import { Spaces, Colors, Breakpoints } from '~/styles/Metrics';
 
 export const Container = styled(Scrollbar)`
   .ScrollbarsCustom-Content {
@@ -26,7 +26,10 @@ export const Skin = styled.li`
   cursor: pointer;
   flex: 1;
   min-width: 200px;
-  max-width: 320px;
+  max-width: 250px;
+  ${Breakpoints.md} {
+    max-width: 320px;
+  }
   &:hover {
     box-shadow: 0px 0px 10px 5px ${Colors.DarkShadow};
     img {

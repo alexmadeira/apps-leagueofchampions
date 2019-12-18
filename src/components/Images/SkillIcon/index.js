@@ -11,6 +11,7 @@ function SkillIcon({ src, name }) {
   return (
     <Container
       src={`${ddragonUrl}/${ddragonVersion}/img/${src}`}
+      crossorigin="anonymous"
       alt={name}
       title={name}
       loader={
