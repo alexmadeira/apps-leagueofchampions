@@ -22,8 +22,8 @@ body,
   flex:1;
   z-index: 1;
   background:${Colors.Background};
-
 }
+
 body, input, button{
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
@@ -32,7 +32,7 @@ body, input, button{
 body {
   -webkit-font-smoothing: antialiased !important;
   text-rendering: optimizeLegibility !important;
-  background: #fff;
+  min-height: 100vh;
 
 }
 

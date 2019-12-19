@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+
 import { rgba } from 'polished';
 
 import { Breakpoints, Colors } from '~/styles/Metrics';
@@ -9,32 +10,15 @@ const videoLoad = keyframes`
 `;
 
 export const Container = styled.div`
-  background-image: ${props =>
-    props.skin
-      ? `url(http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${props.skin}.jpg)`
-      : `url()`};
-
-  ${Breakpoints.md} {
-    background-image: linear-gradient(
-        ${rgba(Colors.Background, 0)} 0%,
-        ${Colors.Background} 48%
-      ),
-      ${props =>
-        props.skin
-          ? `url(http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${props.skin}.jpg)`
-          : `url()`};
-  }
-
-  background-size: cover;
-  background-position: top center;
-  background-repeat: no-repeat;
-  left: 0;
   top: 0;
-  height: 100%;
-  width: 100%;
+  width: calc(100%);
   position: absolute;
   transition: all 500ms linear;
-  ${Breakpoints.sm} {
+  overflow: hidden;
+  z-index: 1;
+  position: absolute;
+
+  ${Breakpoints.xs} {
     background-size: 200%;
     background-position: top center;
     height: 59vh;
@@ -46,11 +30,34 @@ export const Container = styled.div`
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: linear-gradient(
-      rgba(0, 0, 0, 0.2) 80%,
+    position: absolute;
+    background: linear-gradient(
+      ${rgba(Colors.Background, 0)} 80%,
+      ${Colors.Background} 90%
+    );
+  }
+  &::after {
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(
+      to right,
+      ${Colors.Background} 0%,
+      ${rgba(Colors.Background, 0)} 15%,
+      ${rgba(Colors.Background, 0)} 50%,
+      ${rgba(Colors.Background, 0)} 85%,
       ${Colors.Background} 100%
     );
-    position: absolute;
+  }
+  img {
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0px);
   }
 `;
 export const VideoBox = styled.div`
@@ -62,9 +69,6 @@ export const VideoBox = styled.div`
   animation: ${videoLoad} 500ms linear;
   animation-delay: 1.5s;
   animation-fill-mode: forwards;
-  ${Breakpoints.sm} {
-    display: none;
-  }
 `;
 export const Video = styled.video`
   width: 100%;

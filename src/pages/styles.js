@@ -23,4 +23,5 @@ export const Page = styled.div`
   min-height: 100%;
   padding: 0 ${Spaces.BasePadding};
   align-self: stretch;
+  z-index: 10;
 `;
