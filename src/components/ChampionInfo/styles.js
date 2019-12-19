@@ -8,6 +8,7 @@ export const Container = styled.div`
   flex-direction: column;
   margin: ${Spaces.BaseMargin};
   margin-left: calc(${Spaces.BaseMargin} * 5);
+  z-index: 5;
   ${Breakpoints.sm} {
     margin-left: ${Spaces.BaseMargin};
     flex-direction: column;

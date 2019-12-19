@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import { Colors } from '~/styles/Metrics';
+import { Colors, Breakpoints, Spaces } from '~/styles/Metrics';
 
 export default createGlobalStyle`
 * {
@@ -15,25 +15,36 @@ export default createGlobalStyle`
 html,
 body,
 #root {
-  min-height: 100vh;
+  min-height: 100%;
   display:flex;
   flex-direction:column;
   justify-content:flex-start;
   flex:1;
   z-index: 1;
   background:${Colors.Background};
+  ${Breakpoints.md} {
+    min-height: calc(${Spaces.BasePadding} * 4  + 100%);
+  }
 }
 
 body, input, button{
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
+
 }
 
 body {
   -webkit-font-smoothing: antialiased !important;
   text-rendering: optimizeLegibility !important;
-  min-height: 100vh;
+  overflow-x:hidden;
+  max-width:100vw;
+  min-height:100%;
+  ${Breakpoints.md} {
+    padding-bottom: calc(${Spaces.BasePadding} * 4);
+  }
 
 }
+
+
 
 `;

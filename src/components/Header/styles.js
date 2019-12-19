@@ -12,10 +12,15 @@ export const Container = styled.nav`
   align-items: center;
   padding: ${Spaces.BasePadding} calc(${Spaces.BasePadding} * 5);
   position: relative;
-  z-index: 1;
+  z-index: 10;
   margin-bottom: 15px;
-  ${Breakpoints.sm} {
+  ${Breakpoints.md} {
     padding: ${Spaces.BasePadding};
+    background: ${Colors.Background};
+    position: fixed;
+    bottom: 0;
+    margin: 0;
+    left: 0;
   }
 `;
 
@@ -29,6 +34,10 @@ export const Logo = styled.a`
   background-size: contain;
   height: 60px;
   width: 60px;
+  ${Breakpoints.md} {
+    height: 30px;
+    width: 30px;
+  }
 `;
 
 export const Menu = styled.ul`

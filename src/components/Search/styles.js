@@ -11,7 +11,7 @@ export const Container = styled.div`
   top: -101vh;
   width: 100%;
   height: 0%;
-  z-index: 10;
+  z-index: 20;
   display: absolute;
   justify-content: center;
   align-items: center;

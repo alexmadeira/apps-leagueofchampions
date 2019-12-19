@@ -14,6 +14,7 @@ export const Container = styled.ul`
   left: calc(${Spaces.BaseMargin} * 1.2);
   top: 50%;
   transform: translate(0px, -50%);
+  z-index: 5;
   ${Breakpoints.md} {
     flex-direction: row;
     width: 100vw;

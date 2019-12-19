@@ -1,5 +1,4 @@
 import styled, { keyframes } from 'styled-components';
-
 import { rgba } from 'polished';
 
 import { Breakpoints, Colors } from '~/styles/Metrics';
@@ -11,28 +10,28 @@ const videoLoad = keyframes`
 
 export const Container = styled.div`
   top: 0;
-  width: calc(100%);
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
   position: absolute;
-  transition: all 500ms linear;
   overflow: hidden;
   z-index: 1;
-  position: absolute;
+  background: ${Colors.Background};
 
-  ${Breakpoints.xs} {
-    background-size: 200%;
-    background-position: top center;
-    height: 59vh;
+  ${Breakpoints.md} {
+    min-height: 100%;
   }
 
   &::before {
     content: '';
     left: 0;
-    top: 0;
+    bottom: -3px;
     width: 100%;
     height: 100%;
     position: absolute;
+    z-index: 1;
     background: linear-gradient(
-      ${rgba(Colors.Background, 0)} 80%,
+      ${rgba(Colors.Background, 0)} 70%,
       ${Colors.Background} 90%
     );
   }
@@ -43,6 +42,7 @@ export const Container = styled.div`
     width: 100%;
     height: 100%;
     position: absolute;
+    z-index: 1;
     background: linear-gradient(
       to right,
       ${Colors.Background} 0%,
@@ -53,22 +53,33 @@ export const Container = styled.div`
     );
   }
   img {
-    min-width: 100%;
-    height: 100%;
-    position: relative;
+    width: 100%;
+    opacity: 1;
+    height: auto;
+    position: absolute;
+    border: none;
+    background: ${Colors.Background};
+    top: 0;
     left: 50%;
     transform: translate(-50%, 0px);
+    ${Breakpoints.md} {
+      min-width: 100%;
+      width: auto;
+      height: 100%;
+    }
   }
 `;
 export const VideoBox = styled.div`
   min-width: 100vw;
   min-height: 100vh;
   overflow: hidden;
-  position: relative;
+  position: absolute;
   opacity: 0;
   animation: ${videoLoad} 500ms linear;
   animation-delay: 1.5s;
   animation-fill-mode: forwards;
+  left: 0;
+  top: 0;
 `;
 export const Video = styled.video`
   width: 100%;

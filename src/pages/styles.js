@@ -7,8 +7,10 @@ export const Container = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   flex: 1;
+  z-index: 5;
   margin-left: calc(${Spaces.BaseMargin} * 5);
-  height: auto;
+  height: 100%;
+
   ${Breakpoints.md} {
     flex-direction: column;
     margin-left: 0;
@@ -23,5 +25,4 @@ export const Page = styled.div`
   min-height: 100%;
   padding: 0 ${Spaces.BasePadding};
   align-self: stretch;
-  z-index: 10;
 `;

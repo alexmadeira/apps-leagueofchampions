@@ -26,7 +26,7 @@ export const Container = styled.div`
     filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.5));
     ${Breakpoints.md} {
       width: 20vw;
-      margin-top: ${Spaces.BaseMargin};
+      margin-top: 0;
     }
     ${Breakpoints.sm} {
       width: 120px;
