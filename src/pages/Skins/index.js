@@ -1,11 +1,24 @@
 import React, { useState } from 'react';
 import { FaAngleDoubleLeft } from 'react-icons/fa';
-import Skins from '~/components/Skins';
 
-import { Container, ToogleSkins, SkinsBox } from './styles';
+import Splash from '~/components/Images/Splash';
+
+import { useChampion, useChampionInformation } from '~/services/hooks/Champion';
+
+import {
+  Container,
+  ToogleSkins,
+  SkinsBox,
+  ContainerSkins,
+  SkinsList,
+  Skin,
+} from './styles';
 
 export default function SkinsPage() {
   const [closeSkins, setCloseSkins] = useState(false);
+  const { skins, id, activeSkin } = useChampion();
+  const { setSkin } = useChampionInformation();
+
   return (
     <Container>
       <SkinsBox className={closeSkins && 'close'}>
@@ -15,7 +28,21 @@ export default function SkinsPage() {
         >
           <FaAngleDoubleLeft />
         </ToogleSkins>
-        <Skins />
+        <ContainerSkins mobileNative>
+          <SkinsList>
+            {skins &&
+              skins.map(({ num }) => (
+                <Skin
+                  key={num}
+                  onClick={() => {
+                    setSkin(num);
+                  }}
+                >
+                  <Splash id={id} num={num} retire={activeSkin !== num} />
+                </Skin>
+              ))}
+          </SkinsList>
+        </ContainerSkins>
       </SkinsBox>
     </Container>
   );
