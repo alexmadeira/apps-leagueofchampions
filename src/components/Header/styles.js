@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { rgba } from 'polished';
+
 import { Spaces, Colors, Breakpoints } from '~/styles/Metrics';
 
 import logoImage from '~/assets/logo/lol.png';
@@ -16,7 +18,10 @@ export const Container = styled.nav`
   margin-bottom: 15px;
   ${Breakpoints.md} {
     padding: ${Spaces.BasePadding};
-    background: ${Colors.Background};
+    background: linear-gradient(
+      ${rgba(Colors.Background, 0)} 0%,
+      ${Colors.Background} 20%
+    );
     position: fixed;
     bottom: 0;
     margin: 0;

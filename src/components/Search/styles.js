@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 import { rgba } from 'polished';
 
-import { Fonts, Colors } from '~/styles/Metrics';
-import Spaces from '~/styles/Metrics/spaces';
+import { Fonts, Colors, Breakpoints, Spaces } from '~/styles/Metrics';
 
 export const Container = styled.div`
   background: ${rgba(Colors.Black, 0.8)};
@@ -26,7 +25,7 @@ export const Container = styled.div`
 export const Close = styled.span`
   color: ${Colors.Default};
   font-size: ${Fonts.sizes.Icons};
-  right: calc(${Spaces.BaseMargin} * 5);
+  right: calc(${Spaces.BaseMargin} * 2.5);
   top: calc(${Spaces.BaseMargin} * 2);
   position: absolute;
   cursor: pointer;
@@ -39,6 +38,10 @@ export const SearchBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  ${Breakpoints.md} {
+    margin-left: ${Spaces.BaseMargin};
+    justify-content: flex-start;
+  }
 `;
 
 export const SearchForm = styled.div`
@@ -46,6 +49,9 @@ export const SearchForm = styled.div`
   justify-content: center;
   align-items: center;
   width: 40vw;
+  ${Breakpoints.md} {
+    width: 70vw;
+  }
   input {
     border: none;
     border-bottom: 1px solid ${Colors.Default};

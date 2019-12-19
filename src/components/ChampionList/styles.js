@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Scrollbar from 'react-scrollbars-custom';
 import { rgba } from 'polished';
 
-import { Spaces, Colors } from '~/styles/Metrics';
+import { Spaces, Colors, Breakpoints } from '~/styles/Metrics';
 
 export const Container = styled.div`
   flex-direction: row;
@@ -38,9 +38,12 @@ export const ChampionContentList = styled.ul`
 
 export const Champion = styled.li`
   margin: ${Spaces.BaseMargin};
-  min-width: 250px;
-  max-width: 20%;
+  min-width: 200px;
+  max-width: 250px;
   flex: 1;
+  ${Breakpoints.md} {
+    max-width: 320px;
+  }
   cursor: pointer;
   img {
     transition: all 1s ease;
