@@ -16,6 +16,7 @@ export const Container = styled.div`
   ${Breakpoints.sm} {
     margin-left: ${Spaces.BaseMargin};
     flex-direction: column;
+    width: 100%;
   }
 `;
 

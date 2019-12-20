@@ -7,7 +7,6 @@ import GlobalStyle from '~/styles/global';
 
 import Pages from '~/pages';
 import history from '~/services/history';
-import Footer from '~/components/Statics/Footer';
 
 function App() {
   return (
@@ -21,7 +20,6 @@ function App() {
         <li className="xs">XS</li>
       </ul>
       <Pages />
-      <Footer />
     </Router>
   );
 }

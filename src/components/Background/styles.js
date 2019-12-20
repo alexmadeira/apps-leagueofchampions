@@ -12,18 +12,24 @@ export const Container = styled.div`
   top: 0;
   left: 0;
   width: 100%;
-  min-height: 100vh;
-  position: absolute;
+  height: calc(100vh - 33px);
+  position: relative;
   overflow: hidden;
   z-index: 1;
   background: ${Colors.Background};
 
+  ${Breakpoints.lg} {
+    min-width: 100%;
+  }
   ${Breakpoints.md} {
     min-height: 100%;
   }
 
   &::before {
-    content: '';
+    ${Breakpoints.md} {
+      content: '';
+    }
+    min-height: 100%;
     left: 0;
     bottom: -3px;
     width: 100%;
@@ -53,19 +59,21 @@ export const Container = styled.div`
     );
   }
   img {
-    width: 100%;
+    width: initial;
+    min-width: 100%;
+    min-height: 100%;
     opacity: 1;
-    height: auto;
-    position: absolute;
+    position: relative;
     border: none;
     background: ${Colors.Background};
     top: 0;
     left: 50%;
     transform: translate(-50%, 0px);
+
     ${Breakpoints.md} {
       min-width: 100%;
       width: auto;
-      height: 100%;
+      min-height: 100%;
     }
   }
 `;
@@ -82,8 +90,13 @@ export const VideoBox = styled.div`
   top: 0;
 `;
 export const Video = styled.video`
-  width: 100%;
+  width: initial;
+  min-width: 100%;
+  min-height: 100%;
   position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0px);
 `;
 export const PreLoad = styled.div`
   display: none;
