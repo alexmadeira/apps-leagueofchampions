@@ -24,7 +24,6 @@ export const PageContent = styled.div`
   top: 0;
   min-width: 100vw;
   min-height: 100vh;
-
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -34,6 +33,7 @@ export const PageContent = styled.div`
 
   ${Breakpoints.md} {
     flex-direction: column;
+    padding-bottom: calc(15px * 4);
     margin-left: 0;
   }
 `;

@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import { Colors, Breakpoints, Spaces } from '~/styles/Metrics';
+import { Colors, Breakpoints } from '~/styles/Metrics';
 
 export default createGlobalStyle`
 * {
@@ -15,18 +15,19 @@ export default createGlobalStyle`
 html,
 body,
 #root {
-  min-height: 100%;
+  height: 100%;
   display:flex;
   flex-direction:column;
   justify-content:flex-start;
   flex:1;
   z-index: 1;
   background:${Colors.Background};
-  ${Breakpoints.md} {
-    min-height: calc(${Spaces.BasePadding} * 4  + 100%);
-  }
+
 }
 
+#root{
+  background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+}
 body, input, button{
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
@@ -39,10 +40,6 @@ body {
   overflow-x:hidden;
   max-width:100vw;
   min-height:100%;
-  ${Breakpoints.md} {
-    padding-bottom: calc(${Spaces.BasePadding} * 4);
-  }
-
 
   ul.Breakpoints{
     position:absolute;

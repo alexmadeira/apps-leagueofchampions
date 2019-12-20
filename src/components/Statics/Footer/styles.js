@@ -17,14 +17,22 @@ export const Container = styled.div`
   ${Breakpoints.md} {
     margin-left: 0;
   }
-  a {
-    font-family: ${Fonts.family.Cinzel};
-    color: ${Colors.Base};
-    border-bottom: 1px solid ${Colors.FooterBackground};
-    padding: 0 calc(${Spaces.BasePadding} / 3);
-    &:hover {
-      border-bottom: 1px solid ${Colors.Base};
-      color: ${Colors.Active};
+  p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    ${Breakpoints.md} {
+      flex-direction: column;
+    }
+    a {
+      font-family: ${Fonts.family.Cinzel};
+      color: ${Colors.Base};
+      border-bottom: 1px solid ${Colors.FooterBackground};
+      padding: 0 calc(${Spaces.BasePadding} / 3);
+      &:hover {
+        border-bottom: 1px solid ${Colors.Base};
+        color: ${Colors.Active};
+      }
     }
   }
 `;

@@ -14,7 +14,7 @@ export const Container = styled.div`
     margin-top: 55vh;
   }
   ${Breakpoints.sm} {
-    margin-left: ${Spaces.BaseMargin};
+    margin: 55vh 0 ${Spaces.BaseMargin} 0;
     flex-direction: column;
     width: 100%;
   }
