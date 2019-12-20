@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Spaces, Colors, Fonts } from '~/styles/Metrics';
+import { Spaces, Colors, Fonts, Breakpoints } from '~/styles/Metrics';
 
 export const Container = styled.div`
   display: flex;
@@ -16,6 +16,9 @@ export const SkillBox = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   margin-top: calc(${Spaces.BaseMargin} * 2);
+  ${Breakpoints.md} {
+    flex: 1;
+  }
 `;
 
 export const SkillDescriptionBox = styled.div`
@@ -45,4 +48,7 @@ export const SkillDescription = styled.p`
   text-shadow: 1px 1px 1px ${Colors.Black};
   font-size: ${Fonts.sizes.Middle};
   line-height: calc(${Fonts.sizes.Middle} + 5px);
+  ${Breakpoints.md} {
+    max-width: 100%;
+  }
 `;
