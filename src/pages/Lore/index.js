@@ -11,7 +11,7 @@ export default function Lore() {
   return (
     <Container>
       {championMore && (
-        <LoreContent>
+        <LoreContent mobileNative>
           {ReactHtmlParser(championMore.biography.full)}
         </LoreContent>
       )}
