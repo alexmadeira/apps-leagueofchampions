@@ -1,12 +1,7 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { rgba } from 'polished';
 
 import { Breakpoints, Colors } from '~/styles/Metrics';
-
-const videoLoad = keyframes`
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-`;
 
 export const Container = styled.div`
   top: 0;
@@ -82,10 +77,6 @@ export const VideoBox = styled.div`
   min-height: 100vh;
   overflow: hidden;
   position: absolute;
-  opacity: 0;
-  animation: ${videoLoad} 500ms linear;
-  animation-delay: 1.5s;
-  animation-fill-mode: forwards;
   left: 0;
   top: 0;
 `;

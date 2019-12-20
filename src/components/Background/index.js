@@ -17,12 +17,9 @@ export default function Background() {
       />
       {championMore && isBrowser && championMore.video && activeSkin === 0 && (
         <VideoBox>
-          <Video
-            autoPlay
-            loop
-            preload="auto"
-            src={`${championMore.video.uri}`}
-          />
+          <Video autoPlay loop preload="auto">
+            <source src={`${championMore.video.uri}`} />
+          </Video>
         </VideoBox>
       )}
       <PreLoad>
