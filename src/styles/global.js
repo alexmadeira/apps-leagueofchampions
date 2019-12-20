@@ -43,8 +43,42 @@ body {
     padding-bottom: calc(${Spaces.BasePadding} * 4);
   }
 
+
+  ul.Breakpoints{
+    position:absolute;
+    left:10px;
+    top:10;
+    z-index:50;
+    li{
+      background:#fff;
+      margin:10px;
+      padding:5px;
+      ${Breakpoints.xl} {
+        &.xl{
+          background:#0001B0;
+        }
+      }
+      ${Breakpoints.lg} {
+        &.lg{
+          background:#9E9FFF;
+        }
+      }
+      ${Breakpoints.md} {
+        &.md{
+          background:#5556FA;
+        }
+      }
+      ${Breakpoints.sm} {
+        &.sm{
+          background:#AD900E;
+        }
+      }
+      ${Breakpoints.xs} {
+        &.xs{
+          background:#FADF69;
+        }
+      }
+    }
+  }
 }
-
-
-
 `;

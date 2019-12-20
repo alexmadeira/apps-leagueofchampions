@@ -9,6 +9,10 @@ export const Container = styled.div`
   margin: ${Spaces.BaseMargin};
   margin-left: calc(${Spaces.BaseMargin} * 5);
   z-index: 5;
+
+  ${Breakpoints.md} {
+    margin-top: 55vh;
+  }
   ${Breakpoints.sm} {
     margin-left: ${Spaces.BaseMargin};
     flex-direction: column;
@@ -16,29 +20,44 @@ export const Container = styled.div`
 `;
 
 export const Name = styled.h1`
-  font-family: ${Fonts.family.Cinzel};
-  font-size: ${Fonts.sizes.max};
-  line-height: 80px;
-  font-size: 80px;
-  text-transform: uppercase;
-  font-weight: bold;
   position: relative;
-  color: ${Colors.Shadow};
-  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
   ${Breakpoints.sm} {
-    font-size: 40px;
+    justify-content: center;
   }
+  span {
+    position: relative;
+    font-family: ${Fonts.family.Cinzel};
+    font-size: ${Fonts.sizes.max};
+    text-transform: uppercase;
+    font-weight: bold;
+    color: ${Colors.Shadow};
+    line-height: 104px;
+    font-size: 80px;
 
-  &::after {
-    content: attr(data-name);
-    position: absolute;
-    left: 1px;
-    top: 1px;
-    color: white;
-    background: -webkit-linear-gradient(${Colors.Base}, ${Colors.Active});
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    overflow: hidden;
+    ${Breakpoints.sm} {
+      font-size: 60px;
+      line-height: 80px;
+    }
+
+    &::after {
+      content: attr(data-name);
+      position: absolute;
+      left: 1px;
+      top: 1px;
+      color: white;
+      background: -webkit-linear-gradient(${Colors.Base}, ${Colors.Active});
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      overflow: hidden;
+      ${Breakpoints.sm} {
+        left: 2px;
+        top: 2px;
+      }
+    }
   }
 `;
 export const TitleBox = styled.div`
@@ -46,7 +65,8 @@ export const TitleBox = styled.div`
   justify-content: flex-start;
   align-items: center;
   ${Breakpoints.sm} {
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
   }
 `;
@@ -59,7 +79,7 @@ export const Title = styled.p`
   justify-content: flex-start;
   align-items: center;
   color: ${Colors.Default};
-  text-shadow: 3px 2px 2px ${Colors.Black};
+  text-shadow: 1px 1px 0px ${Colors.Black};
   ${Breakpoints.sm} {
     font-size: 20px;
   }

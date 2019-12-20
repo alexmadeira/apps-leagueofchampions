@@ -28,6 +28,6 @@ export const RoleItem = styled.li`
   }
   img {
     max-height: 100%;
-    filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(-1px -1px 2px rgba(0, 0, 0, 1));
   }
 `;

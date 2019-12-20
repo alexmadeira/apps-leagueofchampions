@@ -23,7 +23,7 @@ export const Container = styled.nav`
       ${Colors.Background} 20%
     );
     position: fixed;
-    bottom: 0;
+    bottom: -1px;
     margin: 0;
     left: 0;
   }
