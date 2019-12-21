@@ -1,5 +1,7 @@
 import { useContext } from 'react';
+
 import filterObject from 'filter-obj';
+
 import ChampionContext from '~/contexts/ChampionContext';
 
 export const useSearch = () => {

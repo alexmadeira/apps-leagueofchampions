@@ -1,8 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import history from '~/services/history';
 
+import history from '~/services/history';
 import { useChampionInformation } from '~/services/hooks/Champion';
+
 import { Container, NavItem } from './styles';
 
 export default function Nav() {

@@ -1,7 +1,9 @@
 import React from 'react';
+
 import stripHtml from 'string-strip-html';
 
 import SkillList from '~/components/SkillList';
+import { useChampion } from '~/services/hooks/Champion';
 
 import {
   Container,
@@ -10,8 +12,6 @@ import {
   SkillName,
   SkillDescription,
 } from './styles';
-
-import { useChampion } from '~/services/hooks/Champion';
 
 const getSkill = champion => {
   const { activeSkill, passive, spells } = champion;

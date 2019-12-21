@@ -1,5 +1,7 @@
-import styled from 'styled-components';
 import Scrollbar from 'react-scrollbars-custom';
+
+import styled from 'styled-components';
+
 import { rgba } from 'polished';
 
 import { Spaces, Colors, Breakpoints } from '~/styles/Metrics';

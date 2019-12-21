@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import { FaTimes } from 'react-icons/fa';
 
 import ChampionList from '~/components/ChampionList';
-
-import { useSearch } from '~/services/hooks/Search';
 import { useAllChampion } from '~/services/hooks/Champion';
+import { useSearch } from '~/services/hooks/Search';
 
 import { Container, Close, SearchBox, SearchForm } from './styles';
 

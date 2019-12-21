@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+
 import { Colors, Breakpoints } from '~/styles/Metrics';
 
 export default createGlobalStyle`
@@ -24,14 +25,9 @@ body,
   background:${Colors.Background};
 
 }
-
-#root{
-  background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
-}
 body, input, button{
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
-
 }
 
 body {

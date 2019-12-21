@@ -1,9 +1,9 @@
 import React from 'react';
 import { isBrowser } from 'react-device-detect';
 
+import { ddragonUrl } from '~/config/ddragonConfig';
 import { useChampion } from '~/services/hooks/Champion';
 
-import { ddragonUrl } from '~/config/ddragonConfig';
 import { Container, VideoBox, Video, PreLoad } from './styles';
 
 export default function Background() {

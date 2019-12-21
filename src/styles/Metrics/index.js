@@ -1,7 +1,7 @@
-import ColorsList from './colors';
-import SpacesList from './spaces';
-import FontsConfig from './fonts';
 import BreakpointsConfig from './breakpoints';
+import ColorsList from './colors';
+import FontsConfig from './fonts';
+import SpacesList from './spaces';
 
 export const Colors = { ...ColorsList };
 export const Spaces = { ...SpacesList };

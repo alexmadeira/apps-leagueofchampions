@@ -1,10 +1,9 @@
 import React from 'react';
 
 import Role from '~/components/Role';
+import { useChampion } from '~/services/hooks/Champion';
 
 import { Container, Name, TitleBox, Title } from './styles';
-
-import { useChampion } from '~/services/hooks/Champion';
 
 export default function ChampionInfo() {
   const { name, title } = useChampion();

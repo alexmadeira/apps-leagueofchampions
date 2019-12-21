@@ -1,10 +1,11 @@
 import React from 'react';
 import ContentLoader from 'react-content-loader';
+
 import PropTypes from 'prop-types';
 
 import { ddragonUrl, ddragonVersion } from '~/config/ddragonConfig';
-
 import { Colors } from '~/styles/Metrics';
+
 import { Container } from './styles';
 
 function SkillIcon({ src, name }) {

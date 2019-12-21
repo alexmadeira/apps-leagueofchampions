@@ -1,8 +1,7 @@
 import { useState, useEffect, useContext, useCallback } from 'react';
 
-import { findChampion, getChampionAll } from '~/services/Champions';
-
 import ChampionContext from '~/contexts/ChampionContext';
+import { findChampion, getChampionAll } from '~/services/Champions';
 
 export const useChampion = () => {
   const [champion, setChampion] = useState({});

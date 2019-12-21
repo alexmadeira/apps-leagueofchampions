@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "axios": "^0.19.0",
+    "eslint-plugin-import-helpers": "^1.0.2",
     "filter-obj": "^2.0.1",
     "history": "^4.10.1",
     "polished": "^3.4.2",

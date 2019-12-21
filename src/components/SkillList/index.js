@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Skill from '~/components/Images/SkillIcon';
-
 import { useChampion, useChampionInformation } from '~/services/hooks/Champion';
 
 import { Container, SkillButton } from './styles';

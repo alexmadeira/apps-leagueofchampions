@@ -1,9 +1,11 @@
 import React from 'react';
 import ContentLoader from 'react-content-loader';
+
 import PropTypes from 'prop-types';
 
-import { Colors } from '~/styles/Metrics';
 import { ddragonUrl } from '~/config/ddragonConfig';
+import { Colors } from '~/styles/Metrics';
+
 import { Container, Imagem, Name } from './styles';
 
 function Splash({ id, num, name, retire }) {

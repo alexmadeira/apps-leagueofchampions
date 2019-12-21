@@ -1,10 +1,9 @@
 import React from 'react';
 
 import RoleImage from '~/assets/role';
+import { useChampion } from '~/services/hooks/Champion';
 
 import { Container, RoleItem } from './styles';
-
-import { useChampion } from '~/services/hooks/Champion';
 
 export default function Role() {
   const { tags } = useChampion();

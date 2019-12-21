@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { FaAngleDoubleLeft } from 'react-icons/fa';
 
 import Splash from '~/components/Images/Splash';
-
 import { useChampion, useChampionInformation } from '~/services/hooks/Champion';
 
 import {

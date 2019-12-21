@@ -1,9 +1,9 @@
 import styled from 'styled-components';
+
 import { rgba } from 'polished';
 
-import { Spaces, Colors, Breakpoints } from '~/styles/Metrics';
-
 import logoImage from '~/assets/logo/lol.png';
+import { Spaces, Colors, Breakpoints } from '~/styles/Metrics';
 import Fonts from '~/styles/Metrics/fonts';
 
 export const Container = styled.nav`

@@ -1,9 +1,9 @@
 import React from 'react';
+
 import PropTypes from 'prop-types';
 
-import { useChampionInformation } from '~/services/hooks/Champion';
-
 import Splash from '~/components/Images/Splash';
+import { useChampionInformation } from '~/services/hooks/Champion';
 
 import {
   Container,

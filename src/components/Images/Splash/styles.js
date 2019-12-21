@@ -1,5 +1,6 @@
-import styled from 'styled-components';
 import Img from 'react-image';
+
+import styled from 'styled-components';
 
 import { Colors, Fonts } from '~/styles/Metrics';
 
