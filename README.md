@@ -4,7 +4,7 @@ Um projeto que desenvolvi para passar o tempo e me divertir
 
 ## Preview
 
-[![WIP](WIP.png)]()
+[![League of Champions - Ale Madeira](preview.png)]()
 
 ## Começando
 
@@ -23,7 +23,7 @@ npm  ou yarn
 ### Instalando
 
 ```
-1.
+1. git clone git@bitbucket.org:alexmadeira5/leagueofchampions.git
 2. cd leagueofchampions/
 3. yarn ou npm install
 4. yarn start ou npm run start
