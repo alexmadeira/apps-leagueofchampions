@@ -23,7 +23,7 @@ export const PageContent = styled.div`
   position: absolute;
   z-index: 2;
   top: 0;
-  min-width: 100vw;
+  min-width: calc(100vw - calc(${Spaces.BaseMargin} * 5));
   min-height: 100vh;
   display: flex;
   flex-direction: column;

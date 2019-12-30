@@ -10,7 +10,7 @@ export default function Header() {
 
   return (
     <Container>
-      <Logo href="/#">League of Champions</Logo>
+      <Logo href="/">League of Champions</Logo>
       <Menu>
         <MenuItem onClick={() => toogleSearch()}>
           <FaSearch />

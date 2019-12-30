@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { isMobile } from 'react-device-detect';
 import { FaAngleDoubleLeft } from 'react-icons/fa';
 
 import Splash from '~/components/Images/Splash';
@@ -27,7 +28,7 @@ export default function SkinsPage() {
         >
           <FaAngleDoubleLeft />
         </ToogleSkins>
-        <ContainerSkins mobileNative>
+        <ContainerSkins native={isMobile}>
           <SkinsList>
             {skins &&
               skins.map(({ num }) => (

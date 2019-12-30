@@ -13,7 +13,7 @@ export const Container = styled.div`
   padding: 7px 0;
   z-index: 2;
   margin-top: auto;
-  width: 100%;
+  width: 100vw;
   margin-left: calc(${Spaces.BaseMargin} * -5);
   ${Breakpoints.md} {
     margin-left: 0;
