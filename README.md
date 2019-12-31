@@ -54,3 +54,7 @@ Não há rotina de deploy, utilizo a ferramenta [netlify]("https://www.netlify.c
 ## Licença
 
 Esse projeto não tem Licença mas sinta-se a vontade para olhar baixar copiar não tem problema :)
+
+### TODO
+
+- Verificar a posibilidade de alterar a api principal para a universe para trazer as ultimas atualizações
