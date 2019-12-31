@@ -57,4 +57,4 @@ Esse projeto não tem Licença mas sinta-se a vontade para olhar baixar copiar n
 
 ### TODO
 
-- Verificar a posibilidade de alterar a api principal para a universe para trazer as ultimas atualizações
+- Melhorar requisições para evitar requests duplicados
