@@ -54,9 +54,3 @@ Não há rotina de deploy, utilizo a ferramenta [netlify]("https://www.netlify.c
 ## Licença
 
 Esse projeto não tem Licença mas sinta-se a vontade para olhar baixar copiar não tem problema :)
-
-### TODO
-
-- Melhorar requisições para evitar requests duplicados
-- Bug quando troca de personagem com video
-- corrigir tamamnho do nome quando o nome é muito grande "aurelion sol"
