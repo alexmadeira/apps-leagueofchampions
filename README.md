@@ -1,4 +1,10 @@
-# Leagueofchampions [![Netlify Status](https://api.netlify.com/api/v1/badges/5872c43b-0aef-4e03-8131-679b9c89aaa9/deploy-status)](https://app.netlify.com/sites/mystifying-easley-76eb63/deploys)
+# Leagueofchampions 
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5872c43b-0aef-4e03-8131-679b9c89aaa9/deploy-status)](https://app.netlify.com/sites/mystifying-easley-76eb63/deploys)
+
+![License MIT](https://img.shields.io/badge/license-MIT-green)
+
+[![Made By Alex Madeira](https://img.shields.io/badge/%20made%20by-Alex%20Madeira-blue)](https://www.alexmadeira.com.br/)
 
 Um projeto que desenvolvi para passar o tempo e me divertir
 
@@ -53,4 +59,9 @@ Não há rotina de deploy, utilizo a ferramenta [netlify]("https://www.netlify.c
 
 ## Licença
 
-Esse projeto não tem Licença mas sinta-se a vontade para olhar baixar copiar não tem problema :)
+Copyright by [Alex Madeira](https://www.alexmadeira.com.br/).
+
+Sinta-se a vontade para olhar, baixar, copiar, não tem problema :)
+
+MIT license.
+
